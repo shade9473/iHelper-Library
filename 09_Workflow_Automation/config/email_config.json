@@ -1,0 +1,39 @@
+{
+    "templates": {
+        "login_support": "Dear {name},\n\nThank you for reaching out about your {issue}. Here are the steps to resolve this:\n\n1. Clear your browser cache\n2. Try resetting your password\n3. Visit our support page: {support_link}\n\nIf you continue to experience issues, please don't hesitate to reach out.\n\nBest regards,\niHelper Support",
+        
+        "feature_request": "Dear {name},\n\nThank you for your suggestion about {feature}. We appreciate your feedback and are always looking to improve iHelper.\n\nYour request has been logged in our system (ID: {request_id}) and will be reviewed by our development team.\n\nWe'll keep you updated on any developments.\n\nBest regards,\niHelper Team",
+        
+        "general_inquiry": "Dear {name},\n\nThank you for your interest in iHelper. Regarding your inquiry about {topic}, here's what you need to know:\n\n{information}\n\nFor more details, please visit: {link}\n\nBest regards,\niHelper Team",
+        
+        "default": "Dear {name},\n\nThank you for contacting iHelper. We have received your message and will respond shortly.\n\nBest regards,\niHelper Team"
+    },
+    
+    "rules": {
+        "login_support": [
+            "login",
+            "password",
+            "can't access",
+            "account access"
+        ],
+        "feature_request": [
+            "suggest",
+            "feature",
+            "would be nice",
+            "improvement"
+        ],
+        "general_inquiry": [
+            "question",
+            "inquiry",
+            "information",
+            "details"
+        ]
+    },
+    
+    "settings": {
+        "response_delay": 30,
+        "max_retries": 3,
+        "save_responses": true,
+        "notification_email": "admin@ihelper.tech"
+    }
+}

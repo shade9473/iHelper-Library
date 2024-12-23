@@ -1,0 +1,111 @@
+{
+    "visualization": {
+        "gantt": {
+            "colors": {
+                "not_started": "#808080",
+                "in_progress": "#FFA500",
+                "completed": "#008000",
+                "delayed": "#FF0000",
+                "blocked": "#FF69B4"
+            },
+            "milestone_marker": {
+                "symbol": "diamond",
+                "size": 16,
+                "color": "red"
+            },
+            "chart_height_per_task": 30,
+            "base_height": 400
+        },
+        "priority_colors": {
+            "low": "#00FF00",
+            "medium": "#FFFF00",
+            "high": "#FFA500",
+            "critical": "#FF0000"
+        }
+    },
+    "export_formats": {
+        "supported": ["json", "markdown", "html", "pdf"],
+        "default": "markdown"
+    },
+    "notifications": {
+        "enabled": true,
+        "milestone_reminder_days": 7,
+        "task_reminder_days": 3,
+        "delay_warning_threshold": 0.8
+    },
+    "dependencies": {
+        "circular_check": true,
+        "auto_adjust_dates": true,
+        "cascade_delays": true
+    },
+    "progress_tracking": {
+        "auto_status_update": true,
+        "progress_thresholds": {
+            "in_progress": 0.01,
+            "completed": 1.0
+        },
+        "completion_requirements": {
+            "require_deliverables": true,
+            "require_review": false
+        }
+    },
+    "integrations": {
+        "task_scheduler": {
+            "enabled": true,
+            "auto_create_tasks": true
+        },
+        "meeting_notes": {
+            "enabled": true,
+            "auto_update_progress": true
+        },
+        "calendar": {
+            "enabled": true,
+            "add_milestones": true,
+            "add_tasks": false
+        }
+    },
+    "templates": {
+        "project_types": {
+            "software_development": {
+                "phases": [
+                    "Requirements",
+                    "Design",
+                    "Development",
+                    "Testing",
+                    "Deployment"
+                ],
+                "default_duration": 90
+            },
+            "marketing_campaign": {
+                "phases": [
+                    "Planning",
+                    "Content Creation",
+                    "Review",
+                    "Launch",
+                    "Analysis"
+                ],
+                "default_duration": 45
+            },
+            "research_project": {
+                "phases": [
+                    "Literature Review",
+                    "Methodology",
+                    "Data Collection",
+                    "Analysis",
+                    "Publication"
+                ],
+                "default_duration": 180
+            }
+        }
+    },
+    "reporting": {
+        "metrics": [
+            "completion_rate",
+            "delay_rate",
+            "resource_utilization",
+            "critical_path_status"
+        ],
+        "auto_generate": true,
+        "frequency": "weekly"
+    }
+}

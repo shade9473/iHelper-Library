@@ -1,0 +1,54 @@
+{
+    "version": "2.0.0",
+    "name": "iHelper Resource Library",
+    "description": "Professional resource library showcasing AI-assisted development",
+    "sections": [
+        {
+            "id": "quick-start",
+            "path": "04_Quick_Start_Guides",
+            "title": "Quick Start Guides",
+            "priority": 1
+        },
+        {
+            "id": "automation",
+            "path": "09_Workflow_Automation",
+            "title": "Workflow Automation",
+            "priority": 1
+        },
+        {
+            "id": "tools",
+            "path": "32_Free_Tools",
+            "title": "Free Tools",
+            "priority": 1
+        },
+        {
+            "id": "ai-tutorials",
+            "path": "17_AI_Tutorials",
+            "title": "AI Tutorials",
+            "priority": 1
+        }
+    ],
+    "features": {
+        "search": {
+            "enabled": true,
+            "minQueryLength": 3,
+            "maxResults": 10
+        },
+        "analytics": {
+            "enabled": true,
+            "provider": "cloudflare"
+        }
+    },
+    "meta": {
+        "author": "iHelper",
+        "keywords": [
+            "resource library",
+            "AI development",
+            "business tools",
+            "professional development",
+            "CloudFlare",
+            "Windsurf IDE"
+        ],
+        "baseUrl": "https://ihelper-library.pages.dev"
+    }
+}

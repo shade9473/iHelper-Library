@@ -1,0 +1,11 @@
+{
+  "timestamp": "2024-12-08T10:43:33.629211",
+  "total_feedback_count": 3,
+  "average_ratings": 0.0,
+  "feedback_by_type": {
+    "automation_feedback.md": 1,
+    "tutorial_effectiveness.md": 1,
+    "user_satisfaction_template.md": 1
+  },
+  "latest_feedback": "2024-12-08T10:38:05.474988"
+}

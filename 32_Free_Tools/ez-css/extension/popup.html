@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EZ-CSS Lite</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 16px;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      background: #fafafa;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    
+    .logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+    }
+    
+    h2 {
+      margin: 0;
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    
+    .button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      background: linear-gradient(45deg, #4CAF50, #45a049);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+    }
+    
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+    }
+    
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(76, 175, 80, 0.2);
+    }
+    
+    #status {
+      margin-top: 12px;
+      color: #666;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 12px;
+      background: #fff;
+      border-radius: 6px;
+      border: 1px solid #eee;
+    }
+    
+    .features {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    .feature-item:before {
+      content: "✓";
+      color: #4CAF50;
+      margin-right: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon48.png" alt="EZ-CSS Lite" class="logo">
+    <h2>EZ-CSS Lite</h2>
+  </div>
+  
+  <button id="toggleInspect" class="button">Start Inspection</button>
+  <div id="status">Click to start inspecting elements</div>
+  
+  <div class="features">
+    <div class="feature-item">Quick element inspection</div>
+    <div class="feature-item">Real-time CSS preview</div>
+    <div class="feature-item">One-click copy to clipboard</div>
+    <div class="feature-item">Modern, clean interface</div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

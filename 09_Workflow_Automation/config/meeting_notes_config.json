@@ -1,0 +1,85 @@
+{
+    "meeting_types": {
+        "team_sync": {
+            "default_duration": 30,
+            "template": "team_sync_template.md",
+            "required_fields": ["attendees", "agenda", "action_items"]
+        },
+        "project_review": {
+            "default_duration": 60,
+            "template": "project_review_template.md",
+            "required_fields": ["attendees", "agenda", "discussion_points", "decisions", "action_items"]
+        },
+        "client_meeting": {
+            "default_duration": 60,
+            "template": "client_meeting_template.md",
+            "required_fields": ["attendees", "agenda", "discussion_points", "next_steps"]
+        },
+        "planning": {
+            "default_duration": 90,
+            "template": "planning_template.md",
+            "required_fields": ["attendees", "agenda", "decisions", "action_items"]
+        },
+        "retrospective": {
+            "default_duration": 60,
+            "template": "retrospective_template.md",
+            "required_fields": ["attendees", "discussion_points", "action_items"]
+        }
+    },
+    "templates": {
+        "default_path": "./templates",
+        "custom_path": "./custom_templates"
+    },
+    "export_formats": {
+        "supported": ["markdown", "html", "pdf"],
+        "default": "markdown"
+    },
+    "email": {
+        "sender": "meetings@company.com",
+        "smtp": {
+            "server": "smtp.company.com",
+            "port": 587,
+            "username": "meetings@company.com",
+            "use_tls": true
+        },
+        "templates": {
+            "summary": "email_summary_template.html",
+            "action_items": "action_items_template.html"
+        }
+    },
+    "storage": {
+        "attachments_path": "./attachments",
+        "backup_path": "./backups",
+        "backup_frequency": "daily",
+        "max_backup_count": 30
+    },
+    "action_items": {
+        "priorities": ["low", "medium", "high", "urgent"],
+        "statuses": ["pending", "in_progress", "completed", "blocked"],
+        "default_reminder_days": 2,
+        "auto_task_creation": true
+    },
+    "integrations": {
+        "calendar": {
+            "enabled": true,
+            "provider": "google",
+            "auto_schedule_followup": true
+        },
+        "task_manager": {
+            "enabled": true,
+            "provider": "internal",
+            "auto_create_tasks": true
+        },
+        "file_storage": {
+            "enabled": true,
+            "provider": "local",
+            "path": "./meeting_files"
+        }
+    },
+    "ui": {
+        "theme": "light",
+        "date_format": "YYYY-MM-DD",
+        "time_format": "HH:mm",
+        "timezone": "UTC"
+    }
+}

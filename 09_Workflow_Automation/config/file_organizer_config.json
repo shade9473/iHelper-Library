@@ -1,0 +1,28 @@
+{
+    "rules": {
+        "documents": [".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt", ".xlsx", ".pptx"],
+        "images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".svg", ".tiff", ".webp"],
+        "audio": [".mp3", ".wav", ".flac", ".m4a", ".aac", ".ogg"],
+        "video": [".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".webm"],
+        "archives": [".zip", ".rar", ".7z", ".tar.gz", ".tar", ".iso"],
+        "code": [".py", ".js", ".html", ".css", ".java", ".cpp", ".h", ".php", ".rb"],
+        "design": [".psd", ".ai", ".xd", ".sketch", ".fig"]
+    },
+    "target_dirs": {
+        "documents": "Documents",
+        "images": "Images",
+        "audio": "Audio",
+        "video": "Video",
+        "archives": "Archives",
+        "code": "Code",
+        "design": "Design",
+        "other": "Other"
+    },
+    "options": {
+        "create_date_subfolders": true,
+        "skip_hidden_files": true,
+        "backup_existing": true,
+        "min_file_size": 100,
+        "max_file_size": 10737418240
+    }
+}

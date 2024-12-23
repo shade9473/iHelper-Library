@@ -1,0 +1,62 @@
+{
+    "categories": {
+        "Work": {
+            "color": "#FF4444",
+            "description": "Work-related tasks and projects"
+        },
+        "Personal": {
+            "color": "#44FF44",
+            "description": "Personal tasks and errands"
+        },
+        "Learning": {
+            "color": "#4444FF",
+            "description": "Educational and skill development tasks"
+        },
+        "Health": {
+            "color": "#FF44FF",
+            "description": "Health and wellness related tasks"
+        },
+        "Home": {
+            "color": "#FFFF44",
+            "description": "Home maintenance and improvement tasks"
+        }
+    },
+    "default_settings": {
+        "working_hours": {
+            "start": "09:00",
+            "end": "17:00"
+        },
+        "break_duration": 15,
+        "lunch_duration": 60,
+        "default_task_duration": 30,
+        "max_daily_tasks": 12
+    },
+    "priority_weights": {
+        "URGENT": 4,
+        "HIGH": 3,
+        "MEDIUM": 2,
+        "LOW": 1
+    },
+    "recurrence_patterns": {
+        "daily": "Every day",
+        "weekly": "Every week",
+        "monthly": "Every month",
+        "weekdays": "Monday through Friday",
+        "custom": "Custom pattern"
+    },
+    "notification_settings": {
+        "enable_notifications": true,
+        "notification_lead_time": 15,
+        "notification_methods": ["popup", "email"],
+        "urgent_notification_interval": 5
+    },
+    "export_formats": {
+        "supported": ["json", "text", "csv"],
+        "default": "text"
+    },
+    "database": {
+        "backup_frequency": "daily",
+        "max_backup_count": 7,
+        "backup_location": "./backups"
+    }
+}
