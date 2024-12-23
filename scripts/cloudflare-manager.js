@@ -353,6 +353,10 @@ class CloudflareManager {
       origin_connect_timeout: {
         value: 60
       },
+      // SSL settings - Use Flexible for Pages.dev
+      ssl: {
+        value: 'flexible'
+      },
       // Always use HTTPS
       always_use_https: {
         value: 'on'
@@ -360,10 +364,6 @@ class CloudflareManager {
       // Automatic HTTPS rewrites
       automatic_https_rewrites: {
         value: 'on'
-      },
-      // SSL settings
-      ssl: {
-        value: 'flexible'  // Temporarily use flexible while origin stabilizes
       },
       // Browser cache TTL
       browser_cache_ttl: {
