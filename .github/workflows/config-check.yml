@@ -1,0 +1,96 @@
+name: CloudFlare Configuration
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/config-check.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'scripts/**'
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update all settings'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  configure-cloudflare:
+    runs-on: ubuntu-latest
+    environment: production
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Verify CloudFlare configuration
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      run: |
+        echo " Verifying CloudFlare configuration..."
+        node scripts/config-manager.js
+        
+    - name: Configure DNS and SSL
+      if: success()
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        DOMAIN: 'ihelper.tech'
+        SUBDOMAIN_WWW: 'www.ihelper.tech'
+        SUBDOMAIN_API: 'api.ihelper.tech'
+        SSL_MIN_VERSION: 'TLS1.2'
+        HSTS_MAX_AGE: '31536000'
+        FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+      run: |
+        echo " Configuring DNS and SSL settings..."
+        node scripts/cloudflare-manager.js
+        
+    - name: Run health check
+      if: success()
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+      run: |
+        echo " Running health check..."
+        node scripts/health-check.js
+        
+    - name: Save configuration logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: cloudflare-logs
+        path: |
+          logs/cloudflare/*.json
+          logs/health/*.json
+        retention-days: 7
+
+    - name: Check for configuration errors
+      if: failure()
+      run: |
+        echo " Configuration failed. Please check the logs for details."
+        exit 1
+
+    - name: Notify on success
+      if: success()
+      run: |
+        echo " CloudFlare configuration completed successfully!"
+        echo " SSL and DNS settings are configured"
+        echo " Security headers are enabled"
+        echo " Check the artifacts for detailed logs"
