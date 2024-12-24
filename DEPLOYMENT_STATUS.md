@@ -118,7 +118,7 @@ npm install latest-eslint
 - HTTPS: Enforced
 - Subdomains: www, api configured
 
-### Security Status
+### Security Status (#Incorrect and Unnecessary)
 - HSTS: Enabled
 - TLS Version: 1.3
 - Security Headers: Configured

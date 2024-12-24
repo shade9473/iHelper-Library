@@ -43,7 +43,12 @@ jobs:
         CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
         CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       run: |
-        echo " Verifying CloudFlare configuration..."
+        echo "Verifying CloudFlare configuration..."
+        # Check origin server connection first
+        node scripts/verify-origin.js || {
+          echo "::error::Origin server connection failed. Check server status and DNS configuration."
+          exit 1
+        }
         node scripts/config-manager.js
         
     - name: Configure DNS and SSL
