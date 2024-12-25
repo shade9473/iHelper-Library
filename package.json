@@ -1,22 +1,62 @@
 {
   "name": "ihelper-resource-library",
   "version": "2.0.0",
-  "description": "Professional resource library",
+  "description": "Comprehensive Resource Library for Entrepreneurs",
   "type": "module",
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "vitest run --coverage",
+    "test:integration": "cypress run",
+    "lint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx",
+    "format": "prettier --write \"src/**/*.{vue,js,ts,json}\"",
+    "prepare": "husky install",
+    "performance:audit": "lighthouse https://ihelper-resource-library.pages.dev --view",
+    "security:scan": "npm audit --audit-level=high"
+  },
+  "keywords": [
+    "resource-library",
+    "professional-templates",
+    "business-solutions"
+  ],
+  "author": "iHelper Team",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5",
+    "pinia": "^2.1.7",
     "fuse.js": "^6.6.2",
     "marked": "^9.1.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231121.0",
-    "vite": "^5.0.0"
+    "@vitejs/plugin-vue": "^4.5.2",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0",
+    "cypress": "^13.6.1",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "husky": "^8.0.3",
+    "lighthouse": "^11.3.0",
+    "@cloudflare/workers-types": "^4.20231121.0"
   },
-  "engines": {
-    "node": ">=20.0.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ihelper/resource-library"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

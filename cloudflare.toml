@@ -1,7 +1,6 @@
 [build]
 command = "npm run build"
 publish = "dist"
-pages_build_output_dir = "dist"
 node_version = "20.x"
 
 [build.environment]
@@ -9,6 +8,7 @@ NODE_VERSION = "20"
 NPM_VERSION = "9"
 VITE_APP_TITLE = "iHelper Resource Library"
 VITE_APP_DESCRIPTION = "Practical business solutions for entrepreneurs"
+VITE_BUILD_TIMESTAMP = "2024-12-24T19:23:38-08:00"  # Dynamic build timestamp
 
 [[headers]]
 for = "/*"
@@ -17,13 +17,15 @@ for = "/*"
   X-Content-Type-Options = "nosniff"
   Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
   Referrer-Policy = "strict-origin-when-cross-origin"
-  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net"
+  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:"
 
 [context.production.environment]
 VITE_ENVIRONMENT = "production"
+VITE_PERFORMANCE_MODE = "optimized"
 
 [context.deploy-preview.environment]
 VITE_ENVIRONMENT = "staging"
+VITE_PERFORMANCE_MODE = "debug"
 
 [[redirects]]
 from = "/resources/*"
@@ -34,13 +36,23 @@ status = 200
 for = "/assets/*"
   [headers.values]
   Cache-Control = "public, max-age=31536000, immutable"
+  X-Content-Type-Options = "nosniff"
 
 [performance]
   [[performance.caching]]
   path = "/*"
-  strategy = "cache-first"
-  ttl = 3600
+  strategy = "stale-while-revalidate"
+  ttl = 7200  # Increased cache time
+
+  [[performance.compression]]
+  algorithm = ["brotli", "gzip"]
+  min_size = 1024
 
 [seo]
 site_name = "iHelper Resource Library"
 keywords = ["business resources", "workflow automation", "digital marketing", "professional development"]
+description = "Comprehensive platform for entrepreneurs and professionals"
+
+[security]
+rate_limit = 100  # Requests per minute
+bot_protection = true
