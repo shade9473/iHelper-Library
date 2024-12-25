@@ -40,50 +40,6 @@ for = "/assets/*"
   strategy = "cache-first"
   ttl = 3600
 
-[deployment]
-version = "1.0.0"
-date = "2024-12-24"
-
-[site_config]
-name = "iHelper Comprehensive Resource Library"
-domain = "www.ihelper.com"
-
-[performance]
-caching_strategy = "aggressive"
-minification = true
-brotli_compression = true
-
-[security]
-ssl = "full"
-always_use_https = true
-browser_integrity_check = true
-
 [seo]
 site_name = "iHelper Resource Library"
 keywords = ["business resources", "workflow automation", "digital marketing", "professional development"]
-indexing = true
-crawl_delay = 10
-
-[directories]
-developed = [
-    "13_Online_Courses",
-    "14_Ebook_Summaries", 
-    "15_Professional_Templates"
-]
-
-[optimization]
-html_optimization = true
-css_optimization = true
-javascript_optimization = true
-
-[accessibility]
-wcag_compliance = "AA"
-color_contrast_ratio = "4.5:1"
-
-[monitoring]
-error_tracking = true
-performance_logging = true
-
-[cache_rules]
-static_assets_cache_time = "1y"
-dynamic_content_cache_time = "1h"
