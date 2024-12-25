@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Fuse from 'fuse.js';
-import marked from 'marked';
+import { marked } from 'marked';
 
 class Logger {
     static log(level, component, message, metadata = {}) {
