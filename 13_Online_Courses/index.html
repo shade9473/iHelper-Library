@@ -3,83 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ meta_description }}">
-    <meta name="keywords" content="{{ keywords }}">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="{{ title }} | Comprehensive Resource Library">
-    <meta property="og:description" content="{{ meta_description }}">
-    <meta property="og:type" content="article">
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="../templates/styles/theme.css" as="style">
-    
-    <title>{{ title }} | Comprehensive Resource Library</title>
-    <link rel="stylesheet" href="../templates/styles/theme.css">
-    
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "{{ title }}",
-        "description": "{{ meta_description }}",
-        "author": {
-            "@type": "Organization",
-            "name": "Comprehensive Resource Library"
+    <title>iHelper Online Courses</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f4f6f9;
         }
-    }
-    </script>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .course-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        .course-category {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+    </style>
 </head>
 <body>
-    <header role="banner" class="fade-in">
+    <header>
         <div class="container">
-            <h1>{{ title }}</h1>
-            <p class="text-muted">{{ subtitle }}</p>
+            <h1>iHelper Online Courses</h1>
+            <p>Professional Development, Anytime, Anywhere</p>
         </div>
     </header>
 
-    <nav role="navigation" aria-label="Main navigation" class="fade-in">
-        <div class="container nav-links">
-            <a href="../01_Welcome_Message" class="button">Welcome</a>
-            <a href="../02_Purpose_of_Library" class="button">Purpose</a>
-            <a href="../03_Navigation_Guide" class="button">Navigation</a>
-            <a href="../04_Quick_Start_Guides" class="button">Quick Start</a>
-        </div>
-    </nav>
+    <main class="container">
+        <section class="course-grid">
+            <div class="course-card">
+                <h2 class="course-category">Technology & Digital Skills</h2>
+                <ul class="course-list">
+                    <li>Web Development</li>
+                    <li>Data Science</li>
+                    <li>Cybersecurity</li>
+                    <li>Cloud Computing</li>
+                </ul>
+                <a href="#" class="cta-button">Explore Courses</a>
+            </div>
 
-    <main role="main" class="container">
-        <article class="card fade-in">
-            {{ content }}
-        </article>
-        
-        <aside role="complementary" class="card bg-light fade-in">
-            <h3>Key Takeaways</h3>
-            {{ key_takeaways }}
-        </aside>
-        
-        <nav class="navigation-links" aria-label="Section navigation">
-            
-            <a href="{{ previous_page }}" class="button">← Previous</a>
-            
-            
-            <a href="{{ next_page }}" class="button">Next →</a>
-            
-        </nav>
+            <div class="course-card">
+                <h2 class="course-category">Business & Management</h2>
+                <ul class="course-list">
+                    <li>Project Management</li>
+                    <li>Digital Marketing</li>
+                    <li>Entrepreneurship</li>
+                    <li>Leadership Development</li>
+                </ul>
+                <a href="#" class="cta-button">Explore Courses</a>
+            </div>
+
+            <div class="course-card">
+                <h2 class="course-category">Creative & Design</h2>
+                <ul class="course-list">
+                    <li>Graphic Design</li>
+                    <li>UX/UI Design</li>
+                    <li>Content Creation</li>
+                    <li>Digital Media Production</li>
+                </ul>
+                <a href="#" class="cta-button">Explore Courses</a>
+            </div>
+
+            <div class="course-card">
+                <h2 class="course-category">Professional Communication</h2>
+                <ul class="course-list">
+                    <li>Advanced Writing</li>
+                    <li>Public Speaking</li>
+                    <li>Cross-Cultural Communication</li>
+                    <li>Negotiation Skills</li>
+                </ul>
+                <a href="#" class="cta-button">Explore Courses</a>
+            </div>
+
+            <div class="course-card">
+                <h2 class="course-category">Personal Development</h2>
+                <ul class="course-list">
+                    <li>Time Management</li>
+                    <li>Emotional Intelligence</li>
+                    <li>Personal Branding</li>
+                    <li>Career Strategy</li>
+                </ul>
+                <a href="#" class="cta-button">Explore Courses</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>How Our Online Courses Work</h2>
+            <ol>
+                <li>Browse course categories</li>
+                <li>Select your learning path</li>
+                <li>Enroll in flexible online courses</li>
+                <li>Learn at your own pace</li>
+                <li>Earn certifications</li>
+            </ol>
+        </section>
     </main>
 
-    <footer role="contentinfo" class="fade-in">
+    <footer>
         <div class="container">
-            <p class="text-muted">Comprehensive Resource Library - Your Guide to Success</p>
-            <nav aria-label="Footer navigation">
-                <a href="../">Home</a> | 
-                <a href="../sitemap.html">Sitemap</a> | 
-                <a href="../contact.html">Contact</a>
-            </nav>
+            <p> 2024 iHelper Online Courses. All rights reserved.</p>
+            <p>Last Updated: 2024-12-24 | Version 1.0.0</p>
         </div>
     </footer>
-
-    <!-- Deferred loading of non-critical scripts -->
-    <script src="../templates/scripts/main.js" defer></script>
 </body>
 </html>

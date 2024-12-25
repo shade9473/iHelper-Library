@@ -1,0 +1,1468 @@
+{
+  "total_directories": 57,
+  "total_files": 214,
+  "directory_breakdown": {
+    ".git": {
+      "total_files": 10,
+      "file_types": {
+        "": 10
+      },
+      "content_summary": {
+        "COMMIT_EDITMSG": {
+          "file_type": "",
+          "file_size": 37
+        },
+        "config": {
+          "file_type": "",
+          "file_size": 311
+        },
+        "description": {
+          "file_type": "",
+          "file_size": 73
+        },
+        "HEAD": {
+          "file_type": "",
+          "file_size": 23
+        },
+        "index": {
+          "file_type": "",
+          "file_size": 27795
+        }
+      }
+    },
+    ".github": {
+      "total_files": 1,
+      "file_types": {
+        "": 1
+      },
+      "content_summary": {}
+    },
+    "01_Welcome_Message": {
+      "total_files": 4,
+      "file_types": {
+        ".html": 1,
+        ".md": 3
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 3179,
+          "total_words": 237,
+          "unique_words": 149,
+          "content_hash": "646b4e33908ebc21696f6206c482dd12"
+        },
+        "README.md": {
+          "total_chars": 1859,
+          "total_words": 214,
+          "unique_words": 130,
+          "content_hash": "f5b38b402560a8c0a9bb817bd2666965"
+        },
+        "SEO.md": {
+          "total_chars": 1144,
+          "total_words": 159,
+          "unique_words": 113,
+          "content_hash": "aeae2b669cf639c70edc680a77029fe6"
+        },
+        "welcome.md": {
+          "total_chars": 1440,
+          "total_words": 181,
+          "unique_words": 127,
+          "content_hash": "50327e0e8f635a8a2f4d8e8dd66cb5bd"
+        }
+      }
+    },
+    "02_Purpose_of_Library": {
+      "total_files": 4,
+      "file_types": {
+        ".html": 1,
+        ".md": 3
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "purpose.md": {
+          "total_chars": 961,
+          "total_words": 142,
+          "unique_words": 99,
+          "content_hash": "c8d33857b76c09138fe349837e69faf5"
+        },
+        "README.md": {
+          "total_chars": 1770,
+          "total_words": 247,
+          "unique_words": 149,
+          "content_hash": "48aa65da045a6d15ddc35eb778b9e9d6"
+        },
+        "SEO.md": {
+          "total_chars": 1070,
+          "total_words": 150,
+          "unique_words": 112,
+          "content_hash": "404c96653924cdd786df036b7a101db7"
+        }
+      }
+    },
+    "03_Navigation_Guide": {
+      "total_files": 4,
+      "file_types": {
+        ".html": 1,
+        ".md": 3
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "navigation.md": {
+          "total_chars": 829,
+          "total_words": 131,
+          "unique_words": 88,
+          "content_hash": "c13ce8c2767d97f9c12aab9fef3c3ef7"
+        },
+        "README.md": {
+          "total_chars": 1758,
+          "total_words": 241,
+          "unique_words": 149,
+          "content_hash": "2b06e6b740bcffebea42b6eaeef1effe"
+        },
+        "SEO.md": {
+          "total_chars": 1070,
+          "total_words": 155,
+          "unique_words": 106,
+          "content_hash": "7e6b6daa5681f23d49d4c9616d8a3083"
+        }
+      }
+    },
+    "04_Quick_Start_Guides": {
+      "total_files": 7,
+      "file_types": {
+        ".md": 6,
+        ".html": 1
+      },
+      "content_summary": {
+        "01_Getting_Started_with_iHelper.md": {
+          "total_chars": 2761,
+          "total_words": 431,
+          "unique_words": 267,
+          "content_hash": "1dfa0949395b511a1dd62be455c04604"
+        },
+        "02_Your_First_Automation.md": {
+          "total_chars": 5440,
+          "total_words": 655,
+          "unique_words": 373,
+          "content_hash": "c6bee7e06cf304f683e577b09e018774"
+        },
+        "03_Productivity_Setup_Guide.md": {
+          "total_chars": 4509,
+          "total_words": 556,
+          "unique_words": 325,
+          "content_hash": "14605ed27f68b1eed231c19434d2d09b"
+        },
+        "04_AI_Assistant_Configuration.md": {
+          "total_chars": 7211,
+          "total_words": 836,
+          "unique_words": 497,
+          "content_hash": "27ada6ddd224632378c16c6780d8c7f6"
+        },
+        "05_Template_Customization_Guide.md": {
+          "total_chars": 8485,
+          "total_words": 795,
+          "unique_words": 434,
+          "content_hash": "c3ab5237c0c258a44f4efe4ab7608c4f"
+        },
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1562,
+          "total_words": 221,
+          "unique_words": 132,
+          "content_hash": "d574b56608e9df0050cae80d6ef8450c"
+        }
+      }
+    },
+    "05_AI_Assistant_Tutorials": {
+      "total_files": 5,
+      "file_types": {
+        ".md": 5
+      },
+      "content_summary": {
+        "01_Basic_Prompt_Engineering.md": {
+          "total_chars": 6302,
+          "total_words": 912,
+          "unique_words": 464,
+          "content_hash": "ebf100ac3586be758a2b59056417fb26"
+        },
+        "02_Custom_AI_Assistant_Creation.md": {
+          "total_chars": 8205,
+          "total_words": 763,
+          "unique_words": 445,
+          "content_hash": "e15fb8dec2918c85f395dfb4e9835d8d"
+        },
+        "03_Workflow_Integration_Guide.md": {
+          "total_chars": 11321,
+          "total_words": 928,
+          "unique_words": 468,
+          "content_hash": "31adab58661e1f660bf14deb761211c4"
+        },
+        "04_AI_Tool_Selection_Guide.md": {
+          "total_chars": 9558,
+          "total_words": 928,
+          "unique_words": 513,
+          "content_hash": "95e71be8dae609e5e2bd769a465ec4d8"
+        },
+        "05_Automation_with_AI.md": {
+          "total_chars": 10262,
+          "total_words": 864,
+          "unique_words": 417,
+          "content_hash": "938727e146495b2eabe2b25571e412c4"
+        }
+      }
+    },
+    "05_Basic_Tutorials": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "8448159d842045a744833c1e369edd32"
+        }
+      }
+    },
+    "06_Email_Marketing": {
+      "total_files": 4,
+      "file_types": {
+        ".md": 2,
+        ".html": 1,
+        "": 1
+      },
+      "content_summary": {
+        "email_templates.md": {
+          "total_chars": 1504,
+          "total_words": 248,
+          "unique_words": 161,
+          "content_hash": "ebfedd6b2684491f7e0064c4ecb006e5"
+        },
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "d69be443b9b2cb0acbc82d5d755c0b57"
+        }
+      }
+    },
+    "07_Social_Media": {
+      "total_files": 3,
+      "file_types": {
+        ".md": 2,
+        ".html": 1
+      },
+      "content_summary": {
+        "content_calendar.md": {
+          "total_chars": 1729,
+          "total_words": 244,
+          "unique_words": 167,
+          "content_hash": "d17ceb135ba14d28492d5055f60f489e"
+        },
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1538,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "d4c680a0b39ad2a10b0336e9e061fcfb"
+        }
+      }
+    },
+    "08_SEO_Checklists": {
+      "total_files": 4,
+      "file_types": {
+        ".html": 1,
+        ".md": 2,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "c45f9d2654b193387ec7cdb28b49494e"
+        },
+        "seo_checklist.md": {
+          "total_chars": 1864,
+          "total_words": 290,
+          "unique_words": 167,
+          "content_hash": "cf71504afcf67bbab88906f54b7b0097"
+        }
+      }
+    },
+    "09_Workflow_Automation": {
+      "total_files": 10,
+      "file_types": {
+        ".md": 2,
+        "": 2,
+        ".py": 5,
+        ".html": 1
+      },
+      "content_summary": {
+        "automation_templates.md": {
+          "total_chars": 1412,
+          "total_words": 198,
+          "unique_words": 122,
+          "content_hash": "45b37d26331e614136313bd0efb91f79"
+        },
+        "email_response_automation.py": {
+          "total_chars": 5742,
+          "total_words": 501,
+          "unique_words": 258,
+          "content_hash": "ef7cc8cf6c7d902690dd64931e0f3284"
+        },
+        "file_organizer.py": {
+          "total_chars": 6798,
+          "total_words": 560,
+          "unique_words": 332,
+          "content_hash": "d1df51df8670ca71d8593884230bb7d7"
+        },
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "meeting_notes.py": {
+          "total_chars": 12635,
+          "total_words": 963,
+          "unique_words": 517,
+          "content_hash": "6d09ff7921c750d1b2ea33ba0056afb5"
+        },
+        "project_timeline.py": {
+          "total_chars": 15655,
+          "total_words": 1198,
+          "unique_words": 571,
+          "content_hash": "76308c758971a47f835cebd8c33feb12"
+        },
+        "README.md": {
+          "total_chars": 1566,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "78030ff0b5f24d6ad094b58eb3fc7650"
+        },
+        "task_scheduler.py": {
+          "total_chars": 11544,
+          "total_words": 914,
+          "unique_words": 462,
+          "content_hash": "5aae5887512fe08970de9643e9a9cc74"
+        }
+      }
+    },
+    "10_Blog_Templates": {
+      "total_files": 4,
+      "file_types": {
+        ".md": 2,
+        ".html": 1,
+        "": 1
+      },
+      "content_summary": {
+        "blog_templates.md": {
+          "total_chars": 1809,
+          "total_words": 266,
+          "unique_words": 168,
+          "content_hash": "227a8ebf5cb5cac55660e36db2149f51"
+        },
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "c9142cf3b2f1e58d03496a092dd78906"
+        }
+      }
+    },
+    "11_Video_Scripts": {
+      "total_files": 4,
+      "file_types": {
+        ".html": 1,
+        ".md": 2,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1542,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "39ce1a23d88a4dfcdd3ec461473ce29e"
+        },
+        "video_templates.md": {
+          "total_chars": 1841,
+          "total_words": 272,
+          "unique_words": 167,
+          "content_hash": "3485c43dd633ed0a34ca752c84c2411a"
+        }
+      }
+    },
+    "12_Graphic_Design": {
+      "total_files": 3,
+      "file_types": {
+        ".md": 2,
+        ".html": 1
+      },
+      "content_summary": {
+        "design_resources.md": {
+          "total_chars": 1676,
+          "total_words": 245,
+          "unique_words": 143,
+          "content_hash": "4ee230298526d5acb7c049e75a9f68ce"
+        },
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "e03263cfce0054b129b8b946cab8cad3"
+        }
+      }
+    },
+    "13_Online_Courses": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 130,
+          "content_hash": "e59b8f67ba546bc4f622486dd5668e28"
+        }
+      }
+    },
+    "14_Ebook_Summaries": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "65feccbc6121a52c4b10c6c42f839509"
+        }
+      }
+    },
+    "15_Guide_Summaries": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "4dccc1bae1521aa39bff387e2bd512f1"
+        }
+      }
+    },
+    "16_Whitepaper_Summaries": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1570,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "d0742b4e0381284ae24158ac2220573d"
+        }
+      }
+    },
+    "17_AI_Tutorials": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 4131,
+          "total_words": 316,
+          "unique_words": 215,
+          "content_hash": "89539ae1b154e0babd93f8d16f24d4f9"
+        },
+        "README.md": {
+          "total_chars": 1538,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "d8d3225b0efd2fffd2b8f6831117139d"
+        }
+      }
+    },
+    "18_AI_Case_Studies": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 221,
+          "unique_words": 132,
+          "content_hash": "a52e99ef8aa5eb6b2b55e6e7882f9208"
+        }
+      }
+    },
+    "19_Digital_Marketing": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1558,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "622e0fafed45f670a914d620ef9fca05"
+        }
+      }
+    },
+    "20_Success_Stories": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "516eddb4797cefc52b7e4900b3cb5175"
+        }
+      }
+    },
+    "21_Business_Plans": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "2a064d787e6a35ef14355b68a6d8729e"
+        }
+      }
+    },
+    "22_Networking_Tips": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "f3b1696b81b33dc83edf21bcd6137d1c"
+        }
+      }
+    },
+    "23_Discussion_Forum": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1554,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "c7dbd72676ede2becef6c7220078af2d"
+        }
+      }
+    },
+    "24_AMA_Guidelines": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "68a7d17b8966ed689fb855040bc28933"
+        }
+      }
+    },
+    "25_Interview_Frameworks": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1570,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "a18adab12e569ead06cee5fce022dbcb"
+        }
+      }
+    },
+    "26_Monthly_Updates": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 2
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 130,
+          "content_hash": "179ce6a1cb16049e605a718a9257fbbd"
+        },
+        "stakeholder_meeting_template.md": {
+          "total_chars": 2068,
+          "total_words": 317,
+          "unique_words": 136,
+          "content_hash": "26fd7066c1ab2758af82149ea6059a5a"
+        }
+      }
+    },
+    "27_Newsletter_Drafts": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1558,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "2be1c7beb6f5a94f759a5660a9ec26ab"
+        }
+      }
+    },
+    "28_Feedback_Forms": {
+      "total_files": 7,
+      "file_types": {
+        "": 1,
+        ".md": 4,
+        ".py": 1,
+        ".txt": 1
+      },
+      "content_summary": {
+        "automation_feedback.md": {
+          "total_chars": 1488,
+          "total_words": 237,
+          "unique_words": 124,
+          "content_hash": "d94f95f8e6fffe7e8611db1fba6b9d2a"
+        },
+        "feedback_analyzer.py": {
+          "total_chars": 3841,
+          "total_words": 308,
+          "unique_words": 200,
+          "content_hash": "7297761e98506bb36b540f8f96e896c0"
+        },
+        "README.md": {
+          "total_chars": 1324,
+          "total_words": 178,
+          "unique_words": 112,
+          "content_hash": "c4fb8538aedd624bde8625a8fbc06269"
+        },
+        "requirements.txt": {
+          "total_chars": 55,
+          "total_words": 3,
+          "unique_words": 3,
+          "content_hash": "4fc840680b77b77f257cc2ee70963b46"
+        },
+        "tutorial_effectiveness.md": {
+          "total_chars": 1698,
+          "total_words": 273,
+          "unique_words": 149,
+          "content_hash": "8b2d48a534df2ddc81f72b54a1dbc07b"
+        },
+        "user_satisfaction_template.md": {
+          "total_chars": 1006,
+          "total_words": 156,
+          "unique_words": 103,
+          "content_hash": "3e737fcd31d4ac3d7f33a9f50d02ceb7"
+        }
+      }
+    },
+    "29_Real_Life_Examples": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1562,
+          "total_words": 221,
+          "unique_words": 132,
+          "content_hash": "c61dd21e283a5d3a56cabe7b9948aeb5"
+        }
+      }
+    },
+    "30_Success_Metrics": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".py": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "metrics_analysis.py": {
+          "total_chars": 6051,
+          "total_words": 469,
+          "unique_words": 285,
+          "content_hash": "61c11a629e4d8d2066cb8b90ead3a3dd"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "62dcf87f4f9b6a85386b507dcfca374a"
+        }
+      }
+    },
+    "31_Prompt_Toolkit": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "d07246d8b501d1725d90d976068483fc"
+        }
+      }
+    },
+    "32_Free_Tools": {
+      "total_files": 4,
+      "file_types": {
+        ".md": 2,
+        "": 1,
+        ".html": 1
+      },
+      "content_summary": {
+        "css_scan.md": {
+          "total_chars": 1611,
+          "total_words": 266,
+          "unique_words": 151,
+          "content_hash": "4e3f0b4aa02c202a91755c144f45933e"
+        },
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1530,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "d6a9a32f070123e2975e4fef53a03aea"
+        }
+      }
+    },
+    "33_Offer_Templates": {
+      "total_files": 2,
+      "file_types": {
+        ".html": 1,
+        ".md": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1550,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "d58058e78efbe7b1e102ff93dd2b4cd5"
+        }
+      }
+    },
+    "34_Final_Words": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2931,
+          "total_words": 214,
+          "unique_words": 148,
+          "content_hash": "3a3386e14829efe9cd559502c8b40cdf"
+        },
+        "README.md": {
+          "total_chars": 1534,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "a7aa3481666e04f627fc9e430c8718ed"
+        }
+      }
+    },
+    "35_Remote_Work": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2632,
+          "total_words": 180,
+          "unique_words": 132,
+          "content_hash": "33f7158bdcb42dd97139deb5afe37169"
+        },
+        "README.md": {
+          "total_chars": 1448,
+          "total_words": 197,
+          "unique_words": 123,
+          "content_hash": "f62123d8b502c7fff71b1c709d8797ec"
+        }
+      }
+    },
+    "36_Personal_Development": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2590,
+          "total_words": 171,
+          "unique_words": 129,
+          "content_hash": "f9b65eca9d3becd8a6f2e81ff0771c5d"
+        },
+        "README.md": {
+          "total_chars": 1326,
+          "total_words": 179,
+          "unique_words": 109,
+          "content_hash": "2bde242187d42798041442f9ff2e0090"
+        }
+      }
+    },
+    "37_Project_Management": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2596,
+          "total_words": 172,
+          "unique_words": 128,
+          "content_hash": "167072c2828551e983e03bdedf222da6"
+        },
+        "README.md": {
+          "total_chars": 1282,
+          "total_words": 173,
+          "unique_words": 112,
+          "content_hash": "2e79516d6998f1103a076e64fc84fcf1"
+        }
+      }
+    },
+    "38_Time_Management": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2540,
+          "total_words": 165,
+          "unique_words": 125,
+          "content_hash": "68557a7be09b3a9d5cb2c7433e7716ec"
+        },
+        "README.md": {
+          "total_chars": 1207,
+          "total_words": 168,
+          "unique_words": 105,
+          "content_hash": "e5cfaa30f14f048ffaade28468fead3a"
+        }
+      }
+    },
+    "39_Leadership_Skills": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2623,
+          "total_words": 170,
+          "unique_words": 128,
+          "content_hash": "1f669e28e6fa846d92ea3570a32b39df"
+        },
+        "README.md": {
+          "total_chars": 1207,
+          "total_words": 157,
+          "unique_words": 101,
+          "content_hash": "b83f5352dbd4f76911b491916b8d8cb6"
+        }
+      }
+    },
+    "40_Feedback_Forms": {
+      "total_files": 4,
+      "file_types": {
+        ".html": 1,
+        ".md": 2,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2914,
+          "total_words": 212,
+          "unique_words": 146,
+          "content_hash": "43f656d735fd9f5d207eeeaa59dc0c11"
+        },
+        "README.md": {
+          "total_chars": 1546,
+          "total_words": 217,
+          "unique_words": 131,
+          "content_hash": "32fe0dc6468dfe5c7b694cd211ee2a6a"
+        },
+        "user_feedback_form.md": {
+          "total_chars": 1506,
+          "total_words": 142,
+          "unique_words": 97,
+          "content_hash": "cc8085b41fca0674e3fc0a80c47ee6b3"
+        }
+      }
+    },
+    "41_Interview_Prep": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2635,
+          "total_words": 173,
+          "unique_words": 133,
+          "content_hash": "7a7c95a5460c0cc9a1c4ad93f2dde373"
+        },
+        "README.md": {
+          "total_chars": 1260,
+          "total_words": 168,
+          "unique_words": 105,
+          "content_hash": "98d6e7b742b8df2de8f57d0129bd669c"
+        }
+      }
+    },
+    "42_Code_Review": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2518,
+          "total_words": 168,
+          "unique_words": 121,
+          "content_hash": "66956c7b26f7cb26331926612522c10c"
+        },
+        "README.md": {
+          "total_chars": 1115,
+          "total_words": 155,
+          "unique_words": 87,
+          "content_hash": "6d1090d10fc712c3a3b403e0c543aee7"
+        }
+      }
+    },
+    "43_System_Design": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2561,
+          "total_words": 166,
+          "unique_words": 127,
+          "content_hash": "79e6ff7114df8fab7efabb80f341fed0"
+        },
+        "README.md": {
+          "total_chars": 1088,
+          "total_words": 155,
+          "unique_words": 93,
+          "content_hash": "8fc4f025aed76215c48fd783608f8178"
+        }
+      }
+    },
+    "44_Documentation": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2544,
+          "total_words": 164,
+          "unique_words": 127,
+          "content_hash": "cf9cc9a87e66a5ce604eb3c0707bd189"
+        },
+        "README.md": {
+          "total_chars": 1104,
+          "total_words": 153,
+          "unique_words": 93,
+          "content_hash": "2aca1257fcd6a8a07ae685b9e6bac4e6"
+        }
+      }
+    },
+    "45_Best_Practices": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        ".md": 1,
+        "": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 2536,
+          "total_words": 165,
+          "unique_words": 130,
+          "content_hash": "69433154440329ab2cd65ab66d31b91c"
+        },
+        "README.md": {
+          "total_chars": 1108,
+          "total_words": 150,
+          "unique_words": 92,
+          "content_hash": "5e9bdb8bf19533bed117561b7dbd62f3"
+        }
+      }
+    },
+    "assets": {
+      "total_files": 2,
+      "file_types": {
+        "": 2
+      },
+      "content_summary": {}
+    },
+    "content": {
+      "total_files": 2,
+      "file_types": {
+        "": 2
+      },
+      "content_summary": {}
+    },
+    "dist": {
+      "total_files": 5,
+      "file_types": {
+        "": 4,
+        ".html": 1
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 504,
+          "total_words": 32,
+          "unique_words": 28,
+          "content_hash": "9b036c85bec659f9fd3412c03377e94a"
+        }
+      }
+    },
+    "doc": {
+      "total_files": 2,
+      "file_types": {
+        ".md": 2
+      },
+      "content_summary": {
+        "COMPREHENSIVE_PROJECT_ANALYSIS.md": {
+          "total_chars": 13376,
+          "total_words": 1674,
+          "unique_words": 723,
+          "content_hash": "851d8800b10861a65fb0a2518fce0175"
+        },
+        "SIMPLIFIED_PROJECT_ANALYSIS.md": {
+          "total_chars": 1280,
+          "total_words": 179,
+          "unique_words": 110,
+          "content_hash": "fdac1fb7a6e420243a5f30b58a8c73c1"
+        }
+      }
+    },
+    "functions": {
+      "total_files": 1,
+      "file_types": {
+        "": 1
+      },
+      "content_summary": {}
+    },
+    "logs": {
+      "total_files": 8,
+      "file_types": {
+        "": 4,
+        ".json": 1,
+        ".log": 3
+      },
+      "content_summary": {
+        "config-status.json": {
+          "total_chars": 327,
+          "total_words": 29,
+          "unique_words": 20,
+          "content_hash": "534b60776b4a7d2c2b2099dd727159ef"
+        },
+        "deployment-readiness.log": {
+          "file_type": ".log",
+          "file_size": 903
+        },
+        "dns-sync.log": {
+          "file_type": ".log",
+          "file_size": 225
+        },
+        "doc_updates.log": {
+          "file_type": ".log",
+          "file_size": 969
+        }
+      }
+    },
+    "node_modules": {
+      "total_files": 17,
+      "file_types": {
+        "": 16,
+        ".json": 1
+      },
+      "content_summary": {
+        ".package-lock.json": {
+          "total_chars": 2408,
+          "total_words": 122,
+          "unique_words": 62,
+          "content_hash": "0c67ff508a90ce0e9120f4ed91dcca58"
+        }
+      }
+    },
+    "scripts": {
+      "total_files": 13,
+      "file_types": {
+        ".js": 3,
+        ".ps1": 4,
+        ".py": 2,
+        "": 4
+      },
+      "content_summary": {
+        "build.js": {
+          "total_chars": 1408,
+          "total_words": 123,
+          "unique_words": 90,
+          "content_hash": "1deca5577c3d91ab190e2719182faf08"
+        },
+        "cleanup.ps1": {
+          "file_type": ".ps1",
+          "file_size": 6757
+        },
+        "context_validator.py": {
+          "total_chars": 1943,
+          "total_words": 128,
+          "unique_words": 98,
+          "content_hash": "76b30acf2395af1fc7b75e507208b369"
+        },
+        "doc_update.ps1": {
+          "file_type": ".ps1",
+          "file_size": 1879
+        },
+        "resource_directory_analyzer.py": {
+          "total_chars": 5384,
+          "total_words": 367,
+          "unique_words": 229,
+          "content_hash": "15b833389c0ae5415da7c076138f8ff8"
+        },
+        "resource_template_generator.js": {
+          "total_chars": 4043,
+          "total_words": 330,
+          "unique_words": 215,
+          "content_hash": "fac821bc6efa5edf434b2d027301dadd"
+        },
+        "set-env.ps1": {
+          "file_type": ".ps1",
+          "file_size": 475
+        },
+        "start.js": {
+          "total_chars": 1316,
+          "total_words": 147,
+          "unique_words": 95,
+          "content_hash": "413ade66d4abcc50ce84ae44e166f63f"
+        },
+        "system_health.ps1": {
+          "file_type": ".ps1",
+          "file_size": 36389
+        }
+      }
+    },
+    "src": {
+      "total_files": 3,
+      "file_types": {
+        ".html": 1,
+        "": 2
+      },
+      "content_summary": {
+        "index.html": {
+          "total_chars": 1874,
+          "total_words": 133,
+          "unique_words": 108,
+          "content_hash": "fe912d1c658fdf0cdbda7ce4196ebd77"
+        }
+      }
+    }
+  },
+  "file_type_distribution": {},
+  "content_complexity": {},
+  "potential_value_index": {
+    ".git": 20.0,
+    ".github": 2,
+    "01_Welcome_Message": 15.910000000000002,
+    "02_Purpose_of_Library": 15.510000000000002,
+    "03_Navigation_Guide": 15.390000000000002,
+    "04_Quick_Start_Guides": 51.06,
+    "05_AI_Assistant_Tutorials": 53.949999999999996,
+    "05_Basic_Tutorials": 8.29,
+    "06_Email_Marketing": 24.770000000000003,
+    "07_Social_Media": 12.729999999999999,
+    "08_SEO_Checklists": 15.190000000000001,
+    "09_Workflow_Automation": 77.63000000000001,
+    "10_Blog_Templates": 14.950000000000001,
+    "11_Video_Scripts": 15.010000000000002,
+    "12_Graphic_Design": 12.74,
+    "13_Online_Courses": 8.29,
+    "14_Ebook_Summaries": 8.29,
+    "15_Guide_Summaries": 8.29,
+    "16_Whitepaper_Summaries": 8.29,
+    "17_AI_Tutorials": 11.33,
+    "18_AI_Case_Studies": 8.33,
+    "19_Digital_Marketing": 20.29,
+    "20_Success_Stories": 8.29,
+    "21_Business_Plans": 20.29,
+    "22_Networking_Tips": 10.290000000000001,
+    "23_Discussion_Forum": 8.29,
+    "24_AMA_Guidelines": 8.29,
+    "25_Interview_Frameworks": 8.29,
+    "26_Monthly_Updates": 13.46,
+    "27_Newsletter_Drafts": 8.29,
+    "28_Feedback_Forms": 25.550000000000004,
+    "29_Real_Life_Examples": 8.33,
+    "30_Success_Metrics": 14.980000000000002,
+    "31_Prompt_Toolkit": 8.29,
+    "32_Free_Tools": 14.950000000000001,
+    "33_Offer_Templates": 8.29,
+    "34_Final_Words": 10.31,
+    "35_Remote_Work": 9.77,
+    "36_Personal_Development": 19.5,
+    "37_Project_Management": 9.45,
+    "38_Time_Management": 9.33,
+    "39_Leadership_Skills": 9.27,
+    "40_Feedback_Forms": 13.71,
+    "41_Interview_Prep": 9.41,
+    "42_Code_Review": 9.23,
+    "43_System_Design": 9.21,
+    "44_Documentation": 9.17,
+    "45_Best_Practices": 9.15,
+    "assets": 4,
+    "content": 4,
+    "dist": 10.32,
+    "doc": 22.529999999999998,
+    "functions": 2,
+    "logs": 16.29,
+    "node_modules": 35.22,
+    "scripts": 36.949999999999996,
+    "src": 7.33
+  }
+}

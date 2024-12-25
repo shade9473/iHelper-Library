@@ -1,85 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ meta_description }}">
-    <meta name="keywords" content="{{ keywords }}">
     
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="{{ title }} | Comprehensive Resource Library">
-    <meta property="og:description" content="{{ meta_description }}">
-    <meta property="og:type" content="article">
+    <!-- Primary SEO Meta Tags -->
+    <title>iHelper Ebook Summaries: Professional Knowledge Distillation</title>
+    <meta name="description" content="Transform professional books into actionable insights. Discover concise, high-impact summaries across business, technology, personal development, and more.">
+    <meta name="keywords" content="ebook summaries, professional development, book insights, business books, personal growth, skill enhancement, knowledge distillation">
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="../templates/styles/theme.css" as="style">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="iHelper Ebook Summaries: Professional Knowledge Distillation">
+    <meta property="og:description" content="Transform professional books into actionable insights. Discover concise, high-impact summaries across business, technology, personal development, and more.">
+    <meta property="og:url" content="https://www.ihelper.com/ebook-summaries">
+    <meta property="og:site_name" content="iHelper Resource Library">
     
-    <title>{{ title }} | Comprehensive Resource Library</title>
-    <link rel="stylesheet" href="../templates/styles/theme.css">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="iHelper Ebook Summaries: Professional Knowledge Distillation">
+    <meta name="twitter:description" content="Transform professional books into actionable insights. Discover concise, high-impact summaries across business, technology, personal development, and more.">
     
-    <!-- Schema.org markup -->
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.ihelper.com/ebook-summaries">
+    
+    <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "{{ title }}",
-        "description": "{{ meta_description }}",
-        "author": {
+        "@type": "WebSite",
+        "name": "iHelper Ebook Summaries",
+        "url": "https://www.ihelper.com/ebook-summaries",
+        "description": "Transform professional books into actionable insights. Discover concise, high-impact summaries across business, technology, personal development, and more.",
+        "publisher": {
             "@type": "Organization",
-            "name": "Comprehensive Resource Library"
+            "name": "iHelper Resource Library",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.ihelper.com/logo.png"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.ihelper.com/ebook-summaries/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
         }
     }
     </script>
+
+    <style>
+        :root {
+            --primary-color: #4a4a4a;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --accent-color: #007bff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .ebook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .ebook-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        .ebook-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .ebook-category {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .ebook-list {
+            list-style-type: none;
+        }
+        .ebook-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .ebook-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: darken(var(--accent-color), 10%);
+        }
+        .how-it-works {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <header role="banner" class="fade-in">
+    <header>
         <div class="container">
-            <h1>{{ title }}</h1>
-            <p class="text-muted">{{ subtitle }}</p>
+            <h1>iHelper Ebook Summaries</h1>
+            <p>Transform Knowledge into Action in Minutes</p>
         </div>
     </header>
 
-    <nav role="navigation" aria-label="Main navigation" class="fade-in">
-        <div class="container nav-links">
-            <a href="../01_Welcome_Message" class="button">Welcome</a>
-            <a href="../02_Purpose_of_Library" class="button">Purpose</a>
-            <a href="../03_Navigation_Guide" class="button">Navigation</a>
-            <a href="../04_Quick_Start_Guides" class="button">Quick Start</a>
-        </div>
-    </nav>
+    <main class="container">
+        <section class="ebook-grid" aria-label="Ebook Summary Categories">
+            <div class="ebook-card" itemscope itemtype="https://schema.org/Category">
+                <h2 class="ebook-category" itemprop="name">Business & Entrepreneurship</h2>
+                <ul class="ebook-list" itemprop="hasPart">
+                    <li>Strategic Leadership</li>
+                    <li>Startup Strategies</li>
+                    <li>Innovation Insights</li>
+                    <li>Business Transformation</li>
+                </ul>
+                <a href="#" class="cta-button" itemprop="url">Explore Summaries</a>
+            </div>
 
-    <main role="main" class="container">
-        <article class="card fade-in">
-            {{ content }}
-        </article>
-        
-        <aside role="complementary" class="card bg-light fade-in">
-            <h3>Key Takeaways</h3>
-            {{ key_takeaways }}
-        </aside>
-        
-        <nav class="navigation-links" aria-label="Section navigation">
-            
-            <a href="{{ previous_page }}" class="button">← Previous</a>
-            
-            
-            <a href="{{ next_page }}" class="button">Next →</a>
-            
-        </nav>
+            <div class="ebook-card" itemscope itemtype="https://schema.org/Category">
+                <h2 class="ebook-category" itemprop="name">Personal Development</h2>
+                <ul class="ebook-list" itemprop="hasPart">
+                    <li>Productivity Mastery</li>
+                    <li>Emotional Intelligence</li>
+                    <li>Career Growth</li>
+                    <li>Mindset Transformation</li>
+                </ul>
+                <a href="#" class="cta-button" itemprop="url">Explore Summaries</a>
+            </div>
+
+            <div class="ebook-card" itemscope itemtype="https://schema.org/Category">
+                <h2 class="ebook-category" itemprop="name">Technology & Innovation</h2>
+                <ul class="ebook-list" itemprop="hasPart">
+                    <li>Emerging Tech Trends</li>
+                    <li>Digital Transformation</li>
+                    <li>AI Insights</li>
+                    <li>Cybersecurity Strategies</li>
+                </ul>
+                <a href="#" class="cta-button" itemprop="url">Explore Summaries</a>
+            </div>
+
+            <div class="ebook-card" itemscope itemtype="https://schema.org/Category">
+                <h2 class="ebook-category" itemprop="name">Marketing & Communication</h2>
+                <ul class="ebook-list" itemprop="hasPart">
+                    <li>Digital Marketing</li>
+                    <li>Brand Building</li>
+                    <li>Content Strategy</li>
+                    <li>Storytelling Techniques</li>
+                </ul>
+                <a href="#" class="cta-button" itemprop="url">Explore Summaries</a>
+            </div>
+
+            <div class="ebook-card" itemscope itemtype="https://schema.org/Category">
+                <h2 class="ebook-category" itemprop="name">Professional Skills</h2>
+                <ul class="ebook-list" itemprop="hasPart">
+                    <li>Negotiation Mastery</li>
+                    <li>Project Management</li>
+                    <li>Leadership Development</li>
+                    <li>Communication Skills</li>
+                </ul>
+                <a href="#" class="cta-button" itemprop="url">Explore Summaries</a>
+            </div>
+        </section>
+
+        <section class="how-it-works" aria-label="How Our Ebook Summaries Work">
+            <h2>How Our Ebook Summaries Work</h2>
+            <ol>
+                <li>Browse curated book categories</li>
+                <li>Select a summary of interest</li>
+                <li>Read concise, actionable insights</li>
+                <li>Apply knowledge immediately</li>
+                <li>Continuously expand your skills</li>
+            </ol>
+        </section>
     </main>
 
-    <footer role="contentinfo" class="fade-in">
-        <div class="container">
-            <p class="text-muted">Comprehensive Resource Library - Your Guide to Success</p>
-            <nav aria-label="Footer navigation">
-                <a href="../">Home</a> | 
-                <a href="../sitemap.html">Sitemap</a> | 
-                <a href="../contact.html">Contact</a>
-            </nav>
-        </div>
+    <footer>
+        <p> 2024 iHelper Ebook Summaries. All rights reserved.</p>
+        <p>Last Updated: 2024-12-24 | Version 1.0.0</p>
     </footer>
-
-    <!-- Deferred loading of non-critical scripts -->
-    <script src="../templates/scripts/main.js" defer></script>
 </body>
 </html>

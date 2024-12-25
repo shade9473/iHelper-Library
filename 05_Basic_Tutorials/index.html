@@ -3,83 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ meta_description }}">
-    <meta name="keywords" content="{{ keywords }}">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="{{ title }} | Comprehensive Resource Library">
-    <meta property="og:description" content="{{ meta_description }}">
-    <meta property="og:type" content="article">
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="../templates/styles/theme.css" as="style">
-    
-    <title>{{ title }} | Comprehensive Resource Library</title>
-    <link rel="stylesheet" href="../templates/styles/theme.css">
-    
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "{{ title }}",
-        "description": "{{ meta_description }}",
-        "author": {
-            "@type": "Organization",
-            "name": "Comprehensive Resource Library"
+    <title>iHelper Basic Tutorials</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-    }
-    </script>
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .tutorial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .tutorial-card:hover {
+            transform: scale(1.05);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    <header role="banner" class="fade-in">
-        <div class="container">
-            <h1>{{ title }}</h1>
-            <p class="text-muted">{{ subtitle }}</p>
-        </div>
+    <header>
+        <h1>iHelper Basic Tutorials</h1>
+        <p>Your pathway to professional skill development</p>
     </header>
 
-    <nav role="navigation" aria-label="Main navigation" class="fade-in">
-        <div class="container nav-links">
-            <a href="../01_Welcome_Message" class="button">Welcome</a>
-            <a href="../02_Purpose_of_Library" class="button">Purpose</a>
-            <a href="../03_Navigation_Guide" class="button">Navigation</a>
-            <a href="../04_Quick_Start_Guides" class="button">Quick Start</a>
-        </div>
-    </nav>
+    <main>
+        <section class="tutorial-grid">
+            <div class="tutorial-card">
+                <h2>Digital Literacy</h2>
+                <p>Master fundamental computer and internet skills</p>
+                <a href="#" class="cta-button">Start Learning</a>
+            </div>
+            <div class="tutorial-card">
+                <h2>Professional Communication</h2>
+                <p>Enhance your communication and collaboration skills</p>
+                <a href="#" class="cta-button">Start Learning</a>
+            </div>
+            <div class="tutorial-card">
+                <h2>Technology Fundamentals</h2>
+                <p>Understand key technological concepts</p>
+                <a href="#" class="cta-button">Start Learning</a>
+            </div>
+            <div class="tutorial-card">
+                <h2>Productivity Techniques</h2>
+                <p>Learn strategies to maximize your efficiency</p>
+                <a href="#" class="cta-button">Start Learning</a>
+            </div>
+            <div class="tutorial-card">
+                <h2>Soft Skills Development</h2>
+                <p>Build essential interpersonal skills</p>
+                <a href="#" class="cta-button">Start Learning</a>
+            </div>
+        </section>
 
-    <main role="main" class="container">
-        <article class="card fade-in">
-            {{ content }}
-        </article>
-        
-        <aside role="complementary" class="card bg-light fade-in">
-            <h3>Key Takeaways</h3>
-            {{ key_takeaways }}
-        </aside>
-        
-        <nav class="navigation-links" aria-label="Section navigation">
-            
-            <a href="{{ previous_page }}" class="button">← Previous</a>
-            
-            
-            <a href="{{ next_page }}" class="button">Next →</a>
-            
-        </nav>
+        <section>
+            <h2>How It Works</h2>
+            <ol>
+                <li>Browse tutorial categories</li>
+                <li>Select a learning path</li>
+                <li>Complete interactive modules</li>
+                <li>Track your progress</li>
+                <li>Apply skills in real-world scenarios</li>
+            </ol>
+        </section>
     </main>
 
-    <footer role="contentinfo" class="fade-in">
-        <div class="container">
-            <p class="text-muted">Comprehensive Resource Library - Your Guide to Success</p>
-            <nav aria-label="Footer navigation">
-                <a href="../">Home</a> | 
-                <a href="../sitemap.html">Sitemap</a> | 
-                <a href="../contact.html">Contact</a>
-            </nav>
-        </div>
+    <footer>
+        <p> 2024 iHelper. All rights reserved.</p>
+        <p>Last Updated: 2024-12-24 | Version 1.0.0</p>
     </footer>
-
-    <!-- Deferred loading of non-critical scripts -->
-    <script src="../templates/scripts/main.js" defer></script>
 </body>
 </html>

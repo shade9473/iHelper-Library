@@ -1,0 +1,49 @@
+{
+    "site_metadata": {
+        "title": "iHelper Resource Library - Practical Business Solutions",
+        "description": "Comprehensive resource library for entrepreneurs and professionals, offering actionable guides, workflow automation, and digital marketing strategies.",
+        "keywords": [
+            "business resources",
+            "workflow automation",
+            "digital marketing",
+            "professional development",
+            "Port Townsend entrepreneurs"
+        ]
+    },
+    "seo_strategy": {
+        "content_categories": [
+            "Quick Start Guides",
+            "Workflow Automation",
+            "Digital Marketing",
+            "Personal Development",
+            "Business Planning"
+        ],
+        "url_structure": {
+            "base_url": "https://ihelper.tech",
+            "category_prefix": "/resources",
+            "content_slug_format": "{category}/{topic}-guide"
+        }
+    },
+    "performance_optimization": {
+        "cloudflare_settings": {
+            "cache_level": "aggressive",
+            "image_optimization": true,
+            "minification": {
+                "html": true,
+                "css": true,
+                "javascript": true
+            }
+        }
+    },
+    "schema_markup": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "iHelper Resource Library",
+        "description": "A comprehensive platform for professional development and business resources",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ihelper.tech/resources/search?q={search_term}",
+            "query-input": "required name=search_term"
+        }
+    }
+}

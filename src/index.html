@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iHelper Resource Library</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <meta name="description" content="Comprehensive Resource Library for Professionals">
+    <meta name="keywords" content="resources, tutorials, guides, professional development">
+</head>
+<body class="bg-gray-100" x-data="{ mobileMenu: false }">
+    <div class="container mx-auto p-4">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-blue-600">iHelper Resource Library</h1>
+            <input type="text" placeholder="Search resources..." 
+                class="w-full mt-4 p-2 border rounded">
+        </header>
+
+        <div class="grid md:grid-cols-3 gap-4">
+            <div id="categories" class="md:col-span-1 space-y-4">
+                <!-- Categories will be dynamically populated -->
+            </div>
+
+            <div id="search-results" class="md:col-span-2 space-y-2">
+                <!-- Search results will be dynamically populated -->
+            </div>
+        </div>
+
+        <div id="resource-viewer" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+            <div class="bg-white p-6 rounded-lg max-w-2xl max-h-[80vh] overflow-y-auto relative">
+                <button id="close-modal" class="absolute top-4 right-4 text-red-500">Close</button>
+                <div id="resource-viewer-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js" defer></script>
+</body>
+</html>

@@ -2,17 +2,19 @@
   "name": "ihelper-resource-library",
   "version": "2.0.0",
   "description": "Professional resource library",
+  "type": "module",
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "echo 'No tests specified'"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "fuse.js": "^6.6.2",
+    "marked": "^9.1.2"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231121.0"
+    "@cloudflare/workers-types": "^4.20231121.0",
+    "vite": "^5.0.0"
   },
   "engines": {
     "node": ">=20.0.0"
