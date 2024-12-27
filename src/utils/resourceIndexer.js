@@ -1,21 +1,32 @@
 import fs from 'fs'
 import path from 'path'
 
-export function indexResources(baseDir) {
+export function indexResources() {
   const resourceTypes = ['guides', 'tutorials']
   const indexedResources = {}
 
-  resourceTypes.forEach(type => {
-    // In browser, we'll use a predefined list of resources
-    const resourceMap = {
-      'guides': [
-        { id: 'startup-basics', title: 'Startup Basics: From Idea to Execution', type: 'guides' }
-      ],
-      'tutorials': [
-        { id: 'vue-basics', title: 'Vue.js Basics: Building Your First Application', type: 'tutorials' }
-      ]
-    }
+  const resourceMap = {
+    'guides': [
+      { 
+        id: 'startup-basics', 
+        title: 'Startup Basics: From Idea to Execution', 
+        type: 'guides',
+        categoryId: '01',
+        path: '/resources/guides/startup-basics.md'
+      }
+    ],
+    'tutorials': [
+      { 
+        id: 'vue-basics', 
+        title: 'Vue.js Basics: Building Your First Application', 
+        type: 'tutorials',
+        categoryId: '05',
+        path: '/resources/tutorials/vue-basics.md'
+      }
+    ]
+  }
 
+  resourceTypes.forEach(type => {
     indexedResources[type] = resourceMap[type]
   })
 
@@ -23,9 +34,8 @@ export function indexResources(baseDir) {
 }
 
 export function getResourceContent(resourcePath) {
-  // In browser, we'll use a simple mapping
   const resourceContents = {
-    'c:/Users/ihelp/Comprehensive_Resource_Library/Comp_Res_Lib_V2/resources/guides/startup-basics.md': 
+    '/resources/guides/startup-basics.md': 
       `# Startup Basics: From Idea to Execution
 
 ## Overview
@@ -65,7 +75,7 @@ Starting a startup is an exciting journey that requires careful planning, resili
 
 ## Conclusion
 Success in startups is not about perfection, but about continuous learning, adaptation, and perseverance.`,
-    'c:/Users/ihelp/Comprehensive_Resource_Library/Comp_Res_Lib_V2/resources/tutorials/vue-basics.md':
+    '/resources/tutorials/vue-basics.md':
       `# Vue.js Basics: Building Your First Application
 
 ## Overview
@@ -103,51 +113,19 @@ export default {
 }
 \`\`\`
 
-### Components
-\`\`\`vue
-<template>
-  <div>{{ message }}</div>
-</template>
+### Components and Props
+Learn how to create reusable components and pass data between them.
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: ['message']
-}
-</script>
-\`\`\`
-
-### Methods and Event Handling
-\`\`\`vue
-<template>
-  <button @click="incrementCounter">Click me</button>
-  <p>Counter: {{ count }}</p>
-</template>
-
-<script>
-export default {
-  data() {
-    return { count: 0 }
-  },
-  methods: {
-    incrementCounter() {
-      this.count++
-    }
-  }
-}
-</script>
-\`\`\`
+### Vue Router
+Implement client-side routing to create a single-page application.
 
 ## Best Practices
-- Use composition API for complex components
 - Keep components small and focused
+- Use computed properties and methods effectively
 - Leverage Vue's reactivity system
-- Use TypeScript for larger projects
 
-## Recommended Resources
-- [Official Vue Documentation](https://vuejs.org/)
-- [Vue Mastery Free Courses](https://www.vuemastery.com/)
-- [Vue.js Fundamentals on Frontend Masters](https://frontendmasters.com/)`
+## Conclusion
+Vue.js provides a powerful and intuitive way to build modern web applications.`
   }
 
   return resourceContents[resourcePath] || ''
