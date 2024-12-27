@@ -62,7 +62,7 @@
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
     "vite": "^5.0.8",
-    "vitest": "1.6.0"
+    "vitest": "2.1.8"
   },
   "husky": {
     "hooks": {
