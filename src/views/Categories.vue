@@ -1,124 +1,31 @@
 <template>
-  <div class="categories-container">
-    <section class="hero bg-blue-600 text-white py-16 text-center">
-      <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold mb-6">Resource Categories</h1>
-        <p class="text-xl mb-10">Discover curated resources tailored to your professional journey</p>
-        
-        <div class="search-container max-w-2xl mx-auto">
-          <div class="relative">
-            <input 
-              type="text" 
-              v-model="searchQuery"
-              @input="filterCategories"
-              placeholder="Search categories..." 
-              class="w-full p-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-          </div>
-        </div>
+  <div class="categories-page">
+    <h1 class="text-2xl font-bold mb-6">Resource Categories</h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div 
+        v-for="category in categories" 
+        :key="category.id" 
+        class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow"
+      >
+        <h2 class="text-lg font-semibold mb-2">{{ category.name }}</h2>
+        <p class="text-gray-600">Category ID: {{ category.id }}</p>
       </div>
-    </section>
-
-    <section class="category-grid py-16">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div 
-            v-for="category in filteredCategories" 
-            :key="category.id"
-            class="category-card bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition transform hover:-translate-y-2"
-          >
-            <div class="category-icon text-4xl mb-4 text-blue-600">
-              {{ category.icon }}
-            </div>
-            <h3 class="text-xl font-bold mb-4">{{ category.title }}</h3>
-            <p class="text-gray-600 mb-6">{{ category.description }}</p>
-            <div class="flex justify-between items-center">
-              <span class="text-sm text-gray-500">
-                {{ category.resourceCount }} Resources
-              </span>
-              <router-link 
-                :to="category.link" 
-                class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition"
-              >
-                View Resources
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useResourceStore } from '@/stores/resourceStore'
 
-const searchQuery = ref('')
-const categories = ref([
-  {
-    id: 1,
-    title: 'Professional Development',
-    description: 'Enhance your skills and career trajectory',
-    icon: '💼',
-    link: '/category/professional-development',
-    resourceCount: 42
-  },
-  {
-    id: 2,
-    title: 'Technology & AI',
-    description: 'Stay ahead with cutting-edge tech insights',
-    icon: '🚀',
-    link: '/category/technology-ai',
-    resourceCount: 35
-  },
-  {
-    id: 3,
-    title: 'Business Strategies',
-    description: 'Strategic thinking for entrepreneurs',
-    icon: '📈',
-    link: '/category/business-strategies',
-    resourceCount: 28
-  },
-  {
-    id: 4,
-    title: 'Marketing & Sales',
-    description: 'Advanced marketing techniques and sales strategies',
-    icon: '📣',
-    link: '/category/marketing-sales',
-    resourceCount: 22
-  },
-  {
-    id: 5,
-    title: 'Personal Growth',
-    description: 'Mental health, productivity, and self-improvement',
-    icon: '🌱',
-    link: '/category/personal-growth',
-    resourceCount: 18
-  },
-  {
-    id: 6,
-    title: 'Entrepreneurship',
-    description: 'Building and scaling successful businesses',
-    icon: '💡',
-    link: '/category/entrepreneurship',
-    resourceCount: 15
-  }
-])
-
-const filteredCategories = computed(() => {
-  return categories.value.filter(category => 
-    category.title.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.value.toLowerCase())
-  )
-})
-
-const filterCategories = () => {
-  // Additional filtering logic can be added here if needed
-}
+const resourceStore = useResourceStore()
+const categories = ref(resourceStore.categories)
 </script>
 
 <style scoped>
-.hero {
-  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+.categories-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 </style>

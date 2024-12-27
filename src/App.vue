@@ -3,8 +3,9 @@
     <header class="text-center mb-8">
       <h1 class="text-3xl font-bold text-blue-600">iHelper Resource Library</h1>
     </header>
-    <nav class="mb-4">
-      <router-link to="/" class="mr-4 text-blue-500 hover:text-blue-700">Home</router-link>
+    <nav class="mb-4 flex justify-center space-x-4">
+      <router-link to="/" class="text-blue-500 hover:text-blue-700">Home</router-link>
+      <router-link to="/categories" class="text-blue-500 hover:text-blue-700">Categories</router-link>
     </nav>
     <router-view></router-view>
   </div>
