@@ -1,33 +1,24 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Resource Library</router-link>
+  <div id="app" class="container mx-auto p-4">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-blue-600">iHelper Resource Library</h1>
+    </header>
+    <nav class="mb-4">
+      <router-link to="/" class="mr-4 text-blue-500 hover:text-blue-700">Home</router-link>
     </nav>
     <router-view></router-view>
   </div>
 </template>
 
 <script setup>
-// Any global app logic can go here
+// Global app logic can be added here if needed
 </script>
 
 <style>
 #app {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
 }
 </style>

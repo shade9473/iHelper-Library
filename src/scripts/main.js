@@ -1,55 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { createRouter, createWebHistory } from 'vue-router'
 import App from '@/App.vue'
+import router from '@/router'
 import '../index.css'
-import ContentMapper from './content-mapper.js'
-
-// Import views
-const Home = () => import('../views/Home.vue')
-const Categories = () => import('../views/Categories.vue')
-const LearningPaths = () => import('../views/LearningPaths.vue')
-const SkillAssessment = () => import('../views/SkillAssessment.vue')
-const ResourceLibrary = () => import('../views/ResourceLibrary.vue')
-const ResourceDetail = () => import('../views/ResourceDetail.vue')
-
-// Define routes
-const routes = [
-  { 
-    path: '/', 
-    name: 'Home', 
-    component: ResourceLibrary 
-  },
-  { 
-    path: '/categories', 
-    name: 'Categories', 
-    component: Categories 
-  },
-  { 
-    path: '/learning-paths', 
-    name: 'LearningPaths', 
-    component: LearningPaths 
-  },
-  { 
-    path: '/skill-assessment', 
-    name: 'SkillAssessment', 
-    component: SkillAssessment 
-  },
-  {
-    path: '/resource/:type/:id',
-    name: 'ResourceDetail',
-    component: ResourceDetail
-  }
-]
-
-// Create router
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-  scrollBehavior(to, from, savedPosition) {
-    return { top: 0 }
-  }
-})
 
 const app = createApp(App)
 const pinia = createPinia()
