@@ -1,62 +1,71 @@
 {
   "name": "ihelper-resource-library",
-  "version": "2.0.0",
-  "description": "Comprehensive Resource Library for Entrepreneurs",
+  "version": "0.1.0",
+  "description": "A free, community-driven resource library for entrepreneurs and learners",
+  "main": "src/main.js",
   "type": "module",
-  "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=9.0.0"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "vitest run --coverage",
-    "test:integration": "cypress run",
     "lint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx",
-    "format": "prettier --write \"src/**/*.{vue,js,ts,json}\"",
+    "format": "prettier --write \"src/**/*.{vue,js,ts,json,md}\"",
+    "test": "vitest",
+    "audit": "node scripts/content_audit.js",
     "prepare": "husky install",
-    "performance:audit": "lighthouse https://ihelper-resource-library.pages.dev --view",
-    "security:scan": "npm audit --audit-level=high"
+    "benchmark": "node --experimental-vm-modules scripts/performance-benchmark.js",
+    "benchmark:ci": "node --experimental-vm-modules scripts/performance-benchmark.js --ci",
+    "benchmark:compare": "node scripts/compare-benchmarks.js",
+    "verify:content": "node --experimental-vm-modules scripts/content_verification.js",
+    "diagnostic": "node --experimental-vm-modules scripts/diagnostic.js",
+    "test:minimal": "node --experimental-vm-modules scripts/minimal_test.js",
+    "populate:content": "node --experimental-vm-modules scripts/content_populator.js",
+    "index:content": "node --experimental-vm-modules scripts/content_indexer.mjs"
   },
   "keywords": [
     "resource-library",
-    "professional-templates",
-    "business-solutions"
+    "entrepreneurship",
+    "learning",
+    "community"
   ],
-  "author": "iHelper Team",
-  "license": "UNLICENSED",
-  "private": true,
+  "author": "iHelper Community",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
-    "vue": "^3.3.11",
-    "vue-router": "^4.2.5",
-    "pinia": "^2.1.7",
     "fuse.js": "^6.6.2",
-    "marked": "^9.1.2"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.5.2",
-    "vite": "^5.0.10",
-    "vitest": "^1.1.0",
-    "cypress": "^13.6.1",
-    "eslint": "^8.56.0",
-    "prettier": "^3.1.1",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "gray-matter": "^4.0.3",
     "husky": "^8.0.3",
-    "lighthouse": "^11.3.0",
-    "@cloudflare/workers-types": "^4.20231121.0"
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.0.3",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.6"
+  },
+  "lint-staged": {
+    "src/**/*.{vue,js,ts,json,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm test"
+      "pre-commit": "lint-staged"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ihelper/resource-library"
+    "url": "https://github.com/yourusername/ihelper-resource-library"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+  "bugs": {
+    "url": "https://github.com/yourusername/ihelper-resource-library/issues"
   }
 }

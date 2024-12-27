@@ -32,21 +32,23 @@
     </script>
     
     <!-- Preload Critical Assets -->
-    <link rel="preload" href="/assets/css/main.css" as="style">
-    <link rel="preload" href="/assets/js/app.js" as="script">
+    <link rel="preload" href="/src/styles/main.css" as="style">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
-    <div id="app">
-        <!-- App content will be injected here -->
-    </div>
+    <div id="app"></div>
     
     <!-- Analytics (placeholder for CloudFlare Analytics) -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'></script>
     
     <!-- Main Application -->
-    <script type="module" src="/assets/js/app.js"></script>
+    <script type="module">
+        import { createApp } from 'vue'
+        import App from '/src/App.vue'
+
+        createApp(App).mount('#app')
+    </script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+{
+  "systemInfo": {
+    "platform": "win32",
+    "arch": "x64",
+    "cpus": [
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      },
+      {
+        "model": "AMD Ryzen 5 7530U with Radeon Graphics         ",
+        "speed": 1996
+      }
+    ],
+    "totalMemory": 33663750144,
+    "freeMemory": 17055399936,
+    "nodeVersion": "v22.11.0"
+  },
+  "benchmarks": {
+    "contentLoading": {
+      "name": "Content Loading",
+      "duration": 24.355499999999978,
+      "memoryUsed": 11174336,
+      "status": "success"
+    },
+    "searchPerformance": {
+      "name": "Content Search",
+      "duration": 2.1388999999999783,
+      "resultsCount": 0,
+      "memoryUsed": 10914408,
+      "status": "success"
+    },
+    "resourceParsing": {
+      "name": "Markdown Parsing",
+      "duration": 0.027799999999984948,
+      "contentLength": 145,
+      "memoryUsed": 10919360,
+      "status": "success"
+    }
+  },
+  "v8HeapStats": {
+    "total_heap_size": 19566592,
+    "total_heap_size_executable": 1572864,
+    "total_physical_size": 19566592,
+    "total_available_size": 4334033272,
+    "used_heap_size": 10921528,
+    "heap_size_limit": 4345298944,
+    "malloced_memory": 950392,
+    "peak_malloced_memory": 6609304,
+    "does_zap_garbage": 0,
+    "number_of_native_contexts": 2,
+    "number_of_detached_contexts": 0,
+    "total_global_handles_size": 8192,
+    "used_global_handles_size": 4064,
+    "external_memory": 1932245
+  }
+}

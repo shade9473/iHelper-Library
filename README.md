@@ -1,42 +1,101 @@
-# iHelper Resource Library V2
+# 📚 iHelper Resource Library
 
-## 📘 Overview
-Comprehensive professional resource library with dynamic content mapping and advanced search capabilities.
+## 🌟 Project Overview
+
+### Purpose
+A **FREE**, **OPEN-SOURCE** directory of helpful resources for entrepreneurs, learners, and professionals.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 20.x
-- npm 9.x or higher
+- Node.js (v16+)
+- npm or yarn
 
 ### Installation
 ```bash
+# Clone the repository
 git clone https://github.com/yourusername/ihelper-resource-library.git
+
+# Navigate to project directory
 cd ihelper-resource-library
+
+# Install dependencies
 npm install
+
+# Start development server
+npm run dev
 ```
 
-### Development
-```bash
-npm start  # Starts development server
-npm run build  # Builds for production
-npm run preview  # Previews production build
-```
+## 🤝 Contributing
 
-## 🔍 Features
-- Dynamic resource categorization
-- Fuzzy search across resources
-- Responsive, modern UI
-- Continuous deployment
+### Ways to Contribute
+1. Add new resources
+2. Improve existing content
+3. Report issues
+4. Suggest enhancements
+
+### Contribution Process
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
+
+### Content Guidelines
+- Focus on high-quality, practical resources
+- Ensure content is current and relevant
+- Follow our [Content Verification Guide](/CONTENT_VERIFICATION_GUIDE.md)
+
+## 📂 Project Structure
+```
+ihelper-resource-library/
+│
+├── content/                 # Markdown resource files
+│   ├── 01_Welcome_Message/
+│   ├── 04_Quick_Start_Guides/
+│   ├── 05_AI_Assistant_Tutorials/
+│   └── ...
+│
+├── src/                     # Source code
+│   ├── components/
+│   ├── services/
+│   └── utils/
+│
+├── CONTENT_VERIFICATION_GUIDE.md
+├── PROJECT_STATUS.md
+└── README.md
+```
 
 ## 🛠 Technology Stack
+- Vue.js
 - Vite
-- Tailwind CSS
-- Fuse.js
-- Cloudflare Pages
+- Markdown
+- Fuse.js (Search)
 
-## 📦 Deployment
-Automatically deployed via GitHub Actions to Cloudflare Pages on push to main branch.
+## 📊 Project Status
+- **Current Phase**: Minimum Viable Product (MVP)
+- **Focus**: Content Quality and Accessibility
+
+## 🔍 Search Functionality
+- Basic search across resources
+- Category filtering
+- Relevance-based results
+
+## 💡 Guiding Principles
+- Simplicity
+- Community-Driven
+- Practical Utility
+
+## 🚧 Current Limitations
+- Basic search capabilities
+- Limited categories
+- Ongoing content development
 
 ## 📝 License
-MIT License
+[MIT License](LICENSE)
+
+## 🤔 Questions or Suggestions?
+Open an issue on GitHub or contact us!
+
+---
+
+**Remember**: This is a community project. Every contribution matters!
