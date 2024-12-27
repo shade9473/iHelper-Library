@@ -4,8 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { fileURLToPath, URL } from 'node:url'
 import path from 'node:path'
 import compression from 'vite-plugin-compression'
-import visualizer from 'rollup-plugin-visualizer'
-import viteCompression from 'vite-plugin-compression'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // Explicitly define process if not available
 if (typeof process === 'undefined') {
@@ -35,12 +34,6 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
-      visualizer({
-        filename: './stats.html',
-        open: false,
-        gzipSize: true,
-        brotliSize: true
-      }),
       VitePWA({
         registerType: 'autoUpdate',
         includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
@@ -63,41 +56,16 @@ export default defineConfig(({ mode }) => {
           ]
         },
         workbox: {
-          globPatterns: ['**/*.{js,css,html,svg,png,ico,txt}'],
-          runtimeCaching: [
-            {
-              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-              handler: 'CacheFirst',
-              options: {
-                cacheName: 'google-fonts-cache',
-                expiration: {
-                  maxEntries: 10,
-                  maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
-                }
-              }
-            },
-            {
-              urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-              handler: 'NetworkFirst',
-              options: {
-                cacheName: 'image-cache',
-                expiration: {
-                  maxEntries: 50,
-                  maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
-                }
-              }
-            }
-          ]
+          globPatterns: ['**/*.{js,css,html,svg,png,ico,txt}']
         }
       }),
-      viteCompression({
-        verbose: true,
-        disable: false,
-        threshold: 10240, // 10 KB
-        algorithm: 'gzip',
-        ext: '.gz'
-      }),
-      compression()
+      compression(),
+      visualizer({
+        filename: './stats.html',
+        open: false,
+        gzipSize: true,
+        brotliSize: true
+      })
     ],
     resolve: {
       alias: {
@@ -118,24 +86,18 @@ export default defineConfig(({ mode }) => {
       outDir: 'dist',
       emptyOutDir: true,
       sourcemap: mode !== 'production',
-      minify: 'terser',
       target: 'esnext',
       commonjsOptions: {
         transformMixedEsModules: true
       },
+      minify: 'terser',
       terserOptions: {
         compress: {
           drop_console: true,
           drop_debugger: true
-        }
-      },
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor'
-            }
-          }
+        },
+        format: {
+          comments: false
         }
       }
     },
