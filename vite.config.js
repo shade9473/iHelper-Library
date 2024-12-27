@@ -1,44 +1,26 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
+import path from 'path';
 
 export default defineConfig({
-    root: 'src',
-    base: '/',
-    build: {
-        outDir: '../dist',
-        emptyOutDir: true,
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'src/index.html')
-            },
-            output: {
-                manualChunks(id) {
-                    if (id.includes('node_modules')) {
-                        return 'vendor';
-                    }
-                }
-            }
-        },
-        target: 'esnext'
-    },
-    server: {
-        port: 3000,
-        open: true,
-        strictPort: true
-    },
-    resolve: {
-        alias: {
-            '@': resolve(__dirname, 'src'),
-            '~': resolve(__dirname, 'node_modules')
-        },
-        extensions: ['.js', '.json', '.vue']
-    },
-    optimizeDeps: {
-        include: ['fuse.js', 'marked', 'vue', 'vue-router', 'pinia'],
-        force: true
-    },
-    plugins: [
-        vue()
-    ]
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
+  server: {
+    port: 3000,
+    open: true
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    sourcemap: true
+  },
+  // Ensure compatibility with Cloudflare Pages
+  define: {
+    'process.env.VITE_ENVIRONMENT': JSON.stringify(process.env.VITE_ENVIRONMENT || 'development'),
+    'process.env.VITE_PERFORMANCE_MODE': JSON.stringify(process.env.VITE_PERFORMANCE_MODE || 'standard')
+  }
 });

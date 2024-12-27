@@ -1,0 +1,28 @@
+{
+  "resources": [
+    {
+      "id": "1",
+      "title": "Ultimate Vue.js Guide",
+      "description": "Comprehensive tutorial for mastering Vue.js development",
+      "category": "Web Development",
+      "tags": ["Vue", "JavaScript", "Frontend"],
+      "content": "Vue.js is a progressive JavaScript framework for building user interfaces..."
+    },
+    {
+      "id": "2", 
+      "title": "AI Marketing Strategies",
+      "description": "Advanced techniques for leveraging AI in digital marketing",
+      "category": "Marketing",
+      "tags": ["AI", "Marketing", "Digital Strategy"],
+      "content": "Artificial Intelligence is transforming digital marketing approaches..."
+    },
+    {
+      "id": "3",
+      "title": "Startup Funding Masterclass",
+      "description": "Comprehensive guide to securing investment for your startup",
+      "category": "Entrepreneurship",
+      "tags": ["Startup", "Funding", "Investment"],
+      "content": "Navigating the complex world of startup funding requires strategic planning..."
+    }
+  ]
+}

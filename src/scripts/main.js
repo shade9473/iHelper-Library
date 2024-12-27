@@ -1,9 +1,72 @@
-import ContentMapper from './content-mapper.js';
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import { createRouter, createWebHistory } from 'vue-router'
+import App from '@/App.vue'
+import '../index.css'
+import ContentMapper from './content-mapper.js'
 
+// Import views
+const Home = () => import('../views/Home.vue')
+const Categories = () => import('../views/Categories.vue')
+const LearningPaths = () => import('../views/LearningPaths.vue')
+const SkillAssessment = () => import('../views/SkillAssessment.vue')
+const ResourceLibrary = () => import('../views/ResourceLibrary.vue')
+const ResourceDetail = () => import('../views/ResourceDetail.vue')
+
+// Define routes
+const routes = [
+  { 
+    path: '/', 
+    name: 'Home', 
+    component: ResourceLibrary 
+  },
+  { 
+    path: '/categories', 
+    name: 'Categories', 
+    component: Categories 
+  },
+  { 
+    path: '/learning-paths', 
+    name: 'LearningPaths', 
+    component: LearningPaths 
+  },
+  { 
+    path: '/skill-assessment', 
+    name: 'SkillAssessment', 
+    component: SkillAssessment 
+  },
+  {
+    path: '/resource/:type/:id',
+    name: 'ResourceDetail',
+    component: ResourceDetail
+  }
+]
+
+// Create router
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
+})
+
+const app = createApp(App)
+const pinia = createPinia()
+
+app.use(pinia)
+app.use(router)
+
+// Initialize content mapper
 const contentMapper = new ContentMapper('/');
-const categorySummary = contentMapper.getCategorySummary();
-const searchIndex = contentMapper.buildSearchIndex();
 
+// Comprehensive Error Logging
+const logError = (component, message) => {
+    console.error(`[${component}] ${message}`);
+    // Future: Could send to a logging service
+};
+
+// Validate Critical DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
     // Error Handling for DOM Elements
     const searchInput = document.querySelector('input[placeholder="Search resources..."]');
@@ -13,13 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const resourceViewerContent = document.getElementById('resource-viewer-content');
     const closeModalButton = document.getElementById('close-modal');
 
-    // Comprehensive Error Logging
-    const logError = (component, message) => {
-        console.error(`[${component}] ${message}`);
-        // Future: Could send to a logging service
-    };
-
-    // Validate Critical DOM Elements
     if (!searchInput) logError('Search', 'Search input not found');
     if (!searchResults) logError('Search Results', 'Search results container not found');
     if (!categoriesContainer) logError('Categories', 'Categories container not found');
@@ -30,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Graceful Degradation
     const safePopulateCategories = () => {
         try {
-            categorySummary.forEach(category => {
+            contentMapper.getCategorySummary().forEach(category => {
                 const categoryElement = document.createElement('div');
                 categoryElement.classList.add('category-card');
                 categoryElement.innerHTML = `
@@ -138,8 +194,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial load: show default category
-    if (categorySummary.length > 0) {
-        safeShowCategoryResources(categorySummary[0].name);
+    if (contentMapper.getCategorySummary().length > 0) {
+        safeShowCategoryResources(contentMapper.getCategorySummary()[0].name);
     }
 });
 
@@ -164,3 +220,5 @@ window.addEventListener('load', () => {
         console.error(`Failed to track page load: ${error.message}`);
     }
 });
+
+app.mount('#app')
