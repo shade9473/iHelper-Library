@@ -1,9 +1,37 @@
 [pages]
 project_name = "ihelper-resource-library"
-account_id = ""  # To be filled with actual Cloudflare account ID
-compatibility_date = "2024-12-24"
+account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID"  # Replace with actual account ID
+compatibility_date = "2024-12-27"
+compatibility_flags = ["nodejs_compat"]
 
 [build]
 command = "npm run build"
 pages_build_output_dir = "dist"
 publish_directory = "dist"
+
+[build.environment]
+NODE_VERSION = "20.17.0"
+NPM_VERSION = "9.6.7"
+
+[env.production]
+VITE_ENVIRONMENT = "production"
+VITE_PERFORMANCE_MODE = "optimized"
+
+[env.preview]
+VITE_ENVIRONMENT = "staging"
+VITE_PERFORMANCE_MODE = "standard"
+
+[site]
+bucket = "dist"
+entry_point = "index.html"
+
+[vars]
+APP_NAME = "iHelper Resource Library"
+APP_DOMAIN = "ihelper.tech"
+FEATURE_GLOBAL_SEARCH = "true"
+FEATURE_RESOURCE_UPLOAD = "true"
+FEATURE_DARK_MODE = "true"
+
+[deployment]
+max_version_live = 5
+zero_downtime_deployment = true
