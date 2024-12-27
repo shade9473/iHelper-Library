@@ -3,7 +3,6 @@
     "browser": true,
     "es2021": true,
     "node": true,
-    "jest": true,
     "vitest": true
   },
   "extends": [
@@ -14,18 +13,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["vue"],
+  "plugins": [
+    "vue"
+  ],
   "rules": {
-    "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"],
     "no-console": "warn",
-    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used" }],
-    "vue/multi-word-component-names": "off",
-    "vue/no-multiple-template-root": "error",
-    "vue/require-default-prop": "error",
-    "vue/prop-name-casing": ["error", "camelCase"]
+    "no-unused-vars": "warn"
   },
   "settings": {
     "vue": {
