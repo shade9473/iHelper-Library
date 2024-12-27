@@ -1,11 +1,5 @@
-import fs from 'fs'
-import path from 'path'
-
 export function indexResources() {
-  const resourceTypes = ['guides', 'tutorials']
-  const indexedResources = {}
-
-  const resourceMap = {
+  return {
     'guides': [
       { 
         id: 'startup-basics', 
@@ -25,12 +19,6 @@ export function indexResources() {
       }
     ]
   }
-
-  resourceTypes.forEach(type => {
-    indexedResources[type] = resourceMap[type]
-  })
-
-  return indexedResources
 }
 
 export function getResourceContent(resourcePath) {
