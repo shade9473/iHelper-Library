@@ -1,0 +1,64 @@
+{
+  "timestamp": "2024-12-26 22:48:50",
+  "scenarios_tested": [
+    {
+      "scenario": "Entry-Level Professional Navigation",
+      "results": {
+        "scenario_name": "Entry-Level Professional Navigation",
+        "navigation_time": 0.012601852416992188,
+        "navigation_path": [
+          "Quick Start Guides",
+          "Personal Development",
+          "AI Tutorials"
+        ],
+        "clicks_to_destination": 3,
+        "user_satisfaction_score": 8.386010542965533
+      },
+      "performance": {
+        "passed": true,
+        "metrics": {}
+      }
+    },
+    {
+      "scenario": "Mid-Career Professional Navigation",
+      "results": {
+        "scenario_name": "Mid-Career Professional Navigation",
+        "navigation_time": 0.0003535747528076172,
+        "navigation_path": [
+          "Digital Marketing",
+          "Project Management",
+          "Success Metrics"
+        ],
+        "clicks_to_destination": 3,
+        "user_satisfaction_score": 9.626503059435278
+      },
+      "performance": {
+        "passed": true,
+        "metrics": {}
+      }
+    },
+    {
+      "scenario": "Leadership Track Navigation",
+      "results": {
+        "scenario_name": "Leadership Track Navigation",
+        "navigation_time": 0.0002601146697998047,
+        "navigation_path": [
+          "Leadership Skills",
+          "Networking Tips",
+          "Interview Preparation"
+        ],
+        "clicks_to_destination": 3,
+        "user_satisfaction_score": 7.628497796679168
+      },
+      "performance": {
+        "passed": true,
+        "metrics": {}
+      }
+    }
+  ],
+  "overall_performance": {
+    "passed_scenarios": 3,
+    "total_scenarios": 3,
+    "pass_rate": 100.0
+  }
+}

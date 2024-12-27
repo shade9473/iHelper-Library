@@ -3,50 +3,526 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iHelper Resource Library - Professional Development & AI-Assisted Solutions</title>
+    <title>Port Townsend Professional Resource Library</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Comprehensive resource library showcasing real-world business solutions through AI-assisted development. Free tools, tutorials, and practical guides.">
-    <meta name="keywords" content="resource library, AI development, business tools, professional development, CloudFlare, Windsurf IDE">
-    
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="iHelper Resource Library">
-    <meta property="og:description" content="Transform your business with AI-powered solutions and professional development resources">
-    <meta property="og:url" content="https://ihelper-library.pages.dev">
-    
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "iHelper Resource Library",
-        "description": "Professional resource library for business development and AI solutions",
-        "url": "https://ihelper-library.pages.dev",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ihelper-library.pages.dev/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
+    <!-- Critical Styles with Local Economic Context -->
+    <style>
+        :root {
+            --primary-color: #1d4ed8;  /* Deep blue representing Port Townsend's maritime heritage */
+            --secondary-color: #f0f9ff;  /* Light blue reflecting local coastal environment */
+            --accent-color: #10b981;  /* Green symbolizing adaptability and growth */
+            --text-color: #1f2937;
+            --background-color: #f3f4f6;
+            --tertiary-color: #e5e7eb; /* Added tertiary color for economic context */
         }
-    }
-    </script>
-    
-    <!-- Preload Critical Assets -->
-    <link rel="preload" href="/assets/css/main.css" as="style">
-    <link rel="preload" href="/assets/js/app.js" as="script">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: var(--background-color);
+        }
+        .library-navigation {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .category-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        .category-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .category-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .category-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .category-links li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        .category-links li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            opacity: 0.7;
+        }
+        .category-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        .category-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        header h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .local-context {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-color);
+            border-radius: 12px;
+        }
+        .related-categories {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+        }
+        .related-categories h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+        .related-category-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .related-category-links li {
+            margin-bottom: 0.5rem;
+        }
+        .related-category-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .related-category-links a:hover {
+            color: var(--accent-color);
+        }
+        .economic-context {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: var(--tertiary-color);
+            border-radius: 8px;
+            color: var(--text-color);
+        }
+        .economic-context h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+        .economic-themes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .economic-theme {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: help;
+            transition: background-color 0.3s ease;
+        }
+        .economic-theme:hover {
+            background-color: var(--primary-color);
+        }
+        .economic-context-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
-        <!-- App content will be injected here -->
-    </div>
-    
-    <!-- Analytics (placeholder for CloudFlare Analytics) -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'></script>
-    
-    <!-- Main Application -->
-    <script type="module" src="/assets/js/app.js"></script>
+    <header>
+        <h1>Port Townsend Professional Resource Library</h1>
+        <p>Empowering Professional Growth in a Dynamic Local Economy</p>
+        <div class="local-context">
+            Tailored for Port Townsend's adaptive, community-driven professional landscape
+        </div>
+    </header>
+
+    <main class="library-navigation">
+        <section class="category-section">
+            <h2>Getting Started</h2>
+            <ul class="category-links">
+                <li><a href="01_Welcome_Message/README.md">Welcome Message</a></li>
+                <li><a href="02_Purpose_of_Library/README.md">Library Purpose</a></li>
+                <li><a href="03_Navigation_Guide/README.md">Navigation Guide</a></li>
+                <li><a href="04_Quick_Start_Guides/README.md">Quick Start Guides</a></li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2>AI & Technology</h2>
+            <ul class="category-links">
+                <li><a href="05_AI_Assistant_Tutorials/README.md">AI Assistant Tutorials</a></li>
+                <li><a href="17_AI_Tutorials/README.md">AI Tutorials</a></li>
+                <li><a href="18_AI_Case_Studies/README.md">AI Case Studies</a></li>
+                <li><a href="31_Prompt_Toolkit/README.md">Prompt Toolkit</a></li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2>Business Development</h2>
+            <ul class="category-links">
+                <li><a href="19_Digital_Marketing/README.md">Digital Marketing</a></li>
+                <li><a href="21_Business_Plans/README.md">Business Plans</a></li>
+                <li><a href="22_Networking_Tips/README.md">Networking Tips</a></li>
+                <li><a href="30_Success_Metrics/README.md">Success Metrics</a></li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2>Professional Skills</h2>
+            <ul class="category-links">
+                <li><a href="36_Personal_Development/README.md">Personal Development</a></li>
+                <li><a href="37_Project_Management/README.md">Project Management</a></li>
+                <li><a href="38_Time_Management/README.md">Time Management</a></li>
+                <li><a href="39_Leadership_Skills/README.md">Leadership Skills</a></li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2>Career Development</h2>
+            <ul class="category-links">
+                <li><a href="25_Interview_Frameworks/README.md">Interview Frameworks</a></li>
+                <li><a href="41_Interview_Prep/README.md">Interview Preparation</a></li>
+                <li><a href="42_Code_Review/README.md">Code Review</a></li>
+                <li><a href="45_Best_Practices/README.md">Best Practices</a></li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2>Content & Communication</h2>
+            <ul class="category-links">
+                <li><a href="10_Blog_Templates/README.md">Blog Templates</a></li>
+                <li><a href="11_Video_Scripts/README.md">Video Scripts</a></li>
+                <li><a href="27_Newsletter_Drafts/README.md">Newsletter Drafts</a></li>
+                <li><a href="33_Offer_Templates/README.md">Offer Templates</a></li>
+            </ul>
+        </section>
+
+        <section class="category-section">
+            <h2>Community Resources</h2>
+            <ul class="category-links">
+                <li><a href="23_Discussion_Forum/README.md">Discussion Forum</a></li>
+                <li><a href="24_AMA_Guidelines/README.md">Ask Me Anything</a></li>
+                <li><a href="28_Feedback_Forms/README.md">Feedback & Improvement</a></li>
+                <li><a href="35_Remote_Work/README.md">Remote Work Strategies</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="local-context">
+            <strong>Port Townsend Professional Ecosystem</strong>
+            <p>Designed for adaptability, community growth, and continuous learning</p>
+        </div>
+        <p> 2024 Port Townsend Professional Resource Library. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Port Townsend Economic Context Navigation Integration
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fetch Port Townsend economic navigation metadata
+            async function loadEconomicNavigationMetadata() {
+                try {
+                    const response = await fetch('PORT_TOWNSEND_ECONOMIC_NAVIGATION_METADATA.json');
+                    return await response.json();
+                } catch (error) {
+                    console.error('Failed to load economic navigation metadata:', error);
+                    return null;
+                }
+            }
+            
+            // Enhance navigation with local economic context
+            async function enhanceEconomicNavigation() {
+                const metadata = await loadEconomicNavigationMetadata();
+                
+                if (!metadata) return;
+                
+                const categoryLinks = document.querySelectorAll('.category-section');
+                
+                categoryLinks.forEach(section => {
+                    const categoryTitle = section.querySelector('h2').textContent.toLowerCase().replace(/\s+/g, '_');
+                    
+                    // Find economically connected themes
+                    const economicInsights = metadata.navigation_economic_insights[categoryTitle] || [];
+                    
+                    if (economicInsights.length > 0) {
+                        const economicContextSection = document.createElement('div');
+                        economicContextSection.classList.add('economic-context');
+                        economicContextSection.innerHTML = `
+                            <h3>Port Townsend Economic Connections</h3>
+                            <div class="economic-themes">
+                                ${economicInsights.map(theme => `
+                                    <span class="economic-theme" title="Local Economic Theme">
+                                        ${theme.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                                    </span>
+                                `).join('')}
+                            </div>
+                            <p class="economic-context-description">
+                                These themes reflect Port Townsend's unique economic landscape and potential career pathways.
+                            </p>
+                        `;
+                        
+                        section.appendChild(economicContextSection);
+                    }
+                });
+                
+                // Add styles for economic context
+                const style = document.createElement('style');
+                style.textContent = `
+                    .economic-context {
+                        margin-top: 1rem;
+                        padding: 1rem;
+                        background-color: var(--tertiary-color);
+                        border-radius: 8px;
+                        color: var(--text-color);
+                    }
+                    .economic-context h3 {
+                        color: var(--primary-color);
+                        margin-bottom: 0.75rem;
+                        font-size: 1rem;
+                    }
+                    .economic-themes {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        margin-bottom: 0.75rem;
+                    }
+                    .economic-theme {
+                        background-color: var(--accent-color);
+                        color: white;
+                        padding: 0.25rem 0.5rem;
+                        border-radius: 4px;
+                        font-size: 0.8rem;
+                        cursor: help;
+                        transition: background-color 0.3s ease;
+                    }
+                    .economic-theme:hover {
+                        background-color: var(--primary-color);
+                    }
+                    .economic-context-description {
+                        font-size: 0.9rem;
+                        opacity: 0.8;
+                        line-height: 1.4;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            // Existing cross-referencing and professional stage detection
+            async function enhanceNavigation() {
+                // Fetch cross-referencing metadata
+                async function loadCrossReferencingMetadata() {
+                    try {
+                        const response = await fetch('CROSS_REFERENCING_METADATA.json');
+                        return await response.json();
+                    } catch (error) {
+                        console.error('Failed to load cross-referencing metadata:', error);
+                        return null;
+                    }
+                }
+                
+                // Enhance navigation with cross-referencing
+                async function enhanceNavigation() {
+                    const metadata = await loadCrossReferencingMetadata();
+                    
+                    if (!metadata) return;
+                    
+                    const categoryLinks = document.querySelectorAll('.category-section');
+                    
+                    categoryLinks.forEach(section => {
+                        const categoryTitle = section.querySelector('h2').textContent;
+                        const links = section.querySelectorAll('.category-links a');
+                        
+                        // Find related categories
+                        const relatedCategories = Object.entries(metadata.content_connections)
+                            .filter(([category]) => category === categoryTitle)
+                            .map(([, connections]) => connections)
+                            .flat();
+                        
+                        // Add related category links
+                        if (relatedCategories.length > 0) {
+                            const relatedLinksSection = document.createElement('div');
+                            relatedLinksSection.classList.add('related-categories');
+                            relatedLinksSection.innerHTML = `
+                                <h3>Related Categories</h3>
+                                <ul class="related-category-links">
+                                    ${relatedCategories.map(category => 
+                                        `<li><a href="#${category.toLowerCase().replace(/\s+/g, '-')}">${category}</a></li>`
+                                    ).join('')}
+                                </ul>
+                            `;
+                            
+                            section.appendChild(relatedLinksSection);
+                        }
+                    });
+                }
+                
+                // Existing professional stage detection and interaction tracking
+                function detectProfessionalStage() {
+                    const userInteractions = {
+                        learning_depth: localStorage.getItem('learning_depth') || 0,
+                        skill_breadth: localStorage.getItem('skill_breadth') || 0,
+                        project_sophistication: localStorage.getItem('project_sophistication') || 0,
+                        leadership_engagement: localStorage.getItem('leadership_engagement') || 0,
+                        innovative_thinking: localStorage.getItem('innovative_thinking') || 0,
+                        community_involvement: localStorage.getItem('community_involvement') || 0
+                    };
+                    
+                    // Simplified professional stage detection logic
+                    const stages = [
+                        {
+                            name: 'Entry-Level Professional',
+                            criteria: {
+                                learning_depth: [0, 4],
+                                skill_breadth: [0, 5],
+                                project_sophistication: [0, 3]
+                            }
+                        },
+                        {
+                            name: 'Mid-Career Professional',
+                            criteria: {
+                                learning_depth: [4, 7],
+                                skill_breadth: [5, 8],
+                                project_sophistication: [3, 6]
+                            }
+                        },
+                        {
+                            name: 'Leadership Track',
+                            criteria: {
+                                learning_depth: [7, 10],
+                                skill_breadth: [8, 10],
+                                project_sophistication: [6, 10]
+                            }
+                        }
+                    ];
+                    
+                    const detectStage = () => {
+                        for (let stage of stages) {
+                            const stageMatch = Object.keys(stage.criteria).every(key => {
+                                const [min, max] = stage.criteria[key];
+                                const value = parseInt(userInteractions[key] || 0);
+                                return value >= min && value <= max;
+                            });
+                            
+                            if (stageMatch) {
+                                return stage.name;
+                            }
+                        }
+                        return 'Entry-Level Professional';
+                    };
+                    
+                    const detectedStage = detectStage();
+                    localStorage.setItem('professional_stage', detectedStage);
+                    
+                    // Personalize navigation based on professional stage
+                    const stageSpecificNavigation = {
+                        'Entry-Level Professional': [
+                            '04_Quick_Start_Guides/README.md',
+                            '36_Personal_Development/README.md',
+                            '05_AI_Assistant_Tutorials/README.md'
+                        ],
+                        'Mid-Career Professional': [
+                            '19_Digital_Marketing/README.md',
+                            '37_Project_Management/README.md',
+                            '30_Success_Metrics/README.md'
+                        ],
+                        'Leadership Track': [
+                            '39_Leadership_Skills/README.md',
+                            '22_Networking_Tips/README.md',
+                            '41_Interview_Prep/README.md'
+                        ]
+                    };
+                    
+                    // Update recommended navigation
+                    const recommendedLinks = stageSpecificNavigation[detectedStage] || [];
+                    recommendedLinks.forEach(link => {
+                        const recommendedLink = document.querySelector(`.category-links a[href="${link}"]`);
+                        if (recommendedLink) {
+                            recommendedLink.classList.add('recommended-link');
+                        }
+                    });
+                    
+                    // Optional: Add visual indicator for recommended links
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        .recommended-link {
+                            color: var(--accent-color) !important;
+                            font-weight: bold;
+                            position: relative;
+                        }
+                        .recommended-link::after {
+                            content: '✨';
+                            margin-left: 0.5rem;
+                            font-size: 0.8em;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                    
+                    console.log(`Detected Professional Stage: ${detectedStage}`);
+                    return detectedStage;
+                }
+                
+                // Track user interactions
+                const links = document.querySelectorAll('.category-links a');
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        // Log navigation for future personalization
+                        const interactionMetrics = [
+                            'learning_depth', 
+                            'skill_breadth', 
+                            'project_sophistication'
+                        ];
+                        
+                        interactionMetrics.forEach(metric => {
+                            const currentValue = parseInt(localStorage.getItem(metric) || 0);
+                            localStorage.setItem(metric, Math.min(currentValue + 1, 10));
+                        });
+                        
+                        console.log(`Navigated to: ${link.href}`);
+                    });
+                });
+                
+                // Initialize enhancements
+                enhanceNavigation();
+            }
+            
+            // Initialize enhancements
+            enhanceEconomicNavigation();
+            enhanceNavigation();
+            detectProfessionalStage();
+        });
+    </script>
 </body>
 </html>

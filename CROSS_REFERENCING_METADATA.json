@@ -1,0 +1,153 @@
+{
+    "metadata_version": "1.0",
+    "last_updated": "2024-12-26T22:18:21-08:00",
+    "navigation_principles": {
+        "primary_goal": "Enhance resource discoverability in Port Townsend's professional ecosystem",
+        "key_strategies": [
+            "Contextual linking",
+            "Professional growth mapping",
+            "Adaptive recommendation"
+        ]
+    },
+    "directory_relationships": {
+        "01_Welcome_Message": {
+            "primary_connections": [
+                "02_Purpose_of_Library",
+                "03_Navigation_Guide"
+            ],
+            "context_tags": [
+                "orientation", 
+                "introduction", 
+                "library_overview"
+            ]
+        },
+        "04_Quick_Start_Guides": {
+            "primary_connections": [
+                "09_Workflow_Automation",
+                "36_Personal_Development",
+                "05_AI_Assistant_Tutorials"
+            ],
+            "context_tags": [
+                "skill_development", 
+                "onboarding", 
+                "professional_orientation"
+            ],
+            "recommended_learning_paths": [
+                "Entry-Level Professional",
+                "Career Transition"
+            ]
+        },
+        "09_Workflow_Automation": {
+            "primary_connections": [
+                "35_Remote_Work",
+                "38_Time_Management",
+                "19_Digital_Marketing"
+            ],
+            "context_tags": [
+                "productivity", 
+                "efficiency", 
+                "digital_collaboration"
+            ],
+            "recommended_learning_paths": [
+                "Mid-Career Professional",
+                "Remote Worker"
+            ]
+        },
+        "19_Digital_Marketing": {
+            "primary_connections": [
+                "22_Networking_Tips",
+                "33_Offer_Templates",
+                "09_Workflow_Automation"
+            ],
+            "context_tags": [
+                "local_business", 
+                "digital_presence", 
+                "community_engagement"
+            ],
+            "recommended_learning_paths": [
+                "Entrepreneur",
+                "Marketing Professional"
+            ]
+        },
+        "36_Personal_Development": {
+            "primary_connections": [
+                "37_Project_Management",
+                "39_Leadership_Skills",
+                "04_Quick_Start_Guides"
+            ],
+            "context_tags": [
+                "skill_acquisition", 
+                "career_strategy", 
+                "personal_branding"
+            ],
+            "recommended_learning_paths": [
+                "Career Advancement",
+                "Personal Growth"
+            ]
+        }
+    },
+    "professional_growth_pathways": {
+        "Entry-Level Professional": {
+            "recommended_resources": [
+                "04_Quick_Start_Guides",
+                "36_Personal_Development",
+                "05_AI_Assistant_Tutorials"
+            ],
+            "skill_focus": [
+                "Foundational Skills",
+                "Technology Adaptation",
+                "Professional Orientation"
+            ]
+        },
+        "Mid-Career Professional": {
+            "recommended_resources": [
+                "37_Project_Management",
+                "19_Digital_Marketing",
+                "09_Workflow_Automation"
+            ],
+            "skill_focus": [
+                "Advanced Productivity",
+                "Strategic Thinking",
+                "Digital Collaboration"
+            ]
+        },
+        "Leadership Track": {
+            "recommended_resources": [
+                "39_Leadership_Skills",
+                "38_Time_Management",
+                "22_Networking_Tips"
+            ],
+            "skill_focus": [
+                "Strategic Leadership",
+                "Team Management",
+                "Professional Networking"
+            ]
+        }
+    },
+    "local_economic_context": {
+        "port_townsend_professional_ecosystem": {
+            "key_characteristics": [
+                "High adaptability",
+                "Community-driven learning",
+                "Low-overhead skill development",
+                "Flexible professional pathways"
+            ],
+            "strategic_focus": [
+                "Minimize resource investment",
+                "Maximize skill transferability",
+                "Support local professional growth"
+            ]
+        }
+    },
+    "cross_referencing_rules": {
+        "linking_criteria": [
+            "Shared context tags",
+            "Complementary skill development",
+            "Professional growth alignment"
+        ],
+        "recommendation_weights": {
+            "direct_connection": 0.7,
+            "contextual_similarity": 0.3
+        }
+    }
+}
