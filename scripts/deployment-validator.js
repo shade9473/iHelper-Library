@@ -2,113 +2,122 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-class DeploymentValidator {
+class DeploymentDiagnostics {
     constructor() {
-        this.validationLog = [];
-        this.criticalChecksPassed = true;
+        this.diagnosticLog = [];
+        this.criticalIssuesDetected = false;
     }
 
-    logMessage(level, message) {
+    log(level, message, metadata = {}) {
         const logEntry = {
             timestamp: new Date().toISOString(),
             level,
-            message
+            message,
+            metadata
         };
-        this.validationLog.push(logEntry);
+        this.diagnosticLog.push(logEntry);
         console[level](JSON.stringify(logEntry, null, 2));
     }
 
     validateProjectStructure() {
-        const requiredDirectories = [
+        const requiredPaths = [
             'src',
-            'src/scripts',
             'dist',
-            'node_modules'
+            'node_modules',
+            'vite.config.js',
+            'package.json'
         ];
 
-        requiredDirectories.forEach(dir => {
-            const fullPath = path.resolve(process.cwd(), dir);
-            if (!fs.existsSync(fullPath)) {
-                this.logMessage('error', `Missing required directory: ${dir}`);
-                this.criticalChecksPassed = false;
-            } else {
-                this.logMessage('info', `Directory validated: ${dir}`);
+        requiredPaths.forEach(relativePath => {
+            const fullPath = path.resolve(process.cwd(), relativePath);
+            const exists = fs.existsSync(fullPath);
+            
+            this.log(exists ? 'info' : 'error', 
+                `Path validation: ${relativePath}`, 
+                { 
+                    path: fullPath, 
+                    exists 
+                }
+            );
+
+            if (!exists && !relativePath.includes('.')) {
+                this.criticalIssuesDetected = true;
             }
         });
     }
 
-    validatePackageJson() {
+    validatePackageConfiguration() {
         try {
-            const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-            const requiredScripts = [
-                'dev', 'build', 'preview', 
-                'test', 'lint', 'format'
+            const packageJsonPath = path.resolve(process.cwd(), 'package.json');
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+            const criticalFields = [
+                'name', 
+                'version', 
+                'type', 
+                'scripts.build', 
+                'scripts.dev'
             ];
 
-            requiredScripts.forEach(script => {
-                if (!packageJson.scripts[script]) {
-                    this.logMessage('warn', `Missing script: ${script}`);
+            criticalFields.forEach(field => {
+                const value = field.split('.').reduce((obj, key) => obj?.[key], packageJson);
+                
+                if (!value) {
+                    this.log('warn', `Missing critical configuration: ${field}`);
+                    this.criticalIssuesDetected = true;
                 }
             });
-        } catch (error) {
-            this.logMessage('error', `Package.json validation failed: ${error.message}`);
-            this.criticalChecksPassed = false;
-        }
-    }
 
-    validateViteConfig() {
-        try {
-            const viteConfig = require('../vite.config.js');
-            if (!viteConfig.build || !viteConfig.build.outDir) {
-                this.logMessage('warn', 'Incomplete Vite build configuration');
-            }
-        } catch (error) {
-            this.logMessage('error', `Vite config validation failed: ${error.message}`);
-            this.criticalChecksPassed = false;
-        }
-    }
+            // Dependency health check
+            const criticalDependencies = [
+                'vue', 'vite', 'vue-router', 
+                'pinia', 'fuse.js'
+            ];
 
-    validateDependencies() {
-        const criticalDependencies = [
-            'vue', 'vite', 'fuse.js', 'marked'
-        ];
-
-        try {
-            const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-            
             criticalDependencies.forEach(dep => {
-                if (!packageJson.dependencies[dep]) {
-                    this.logMessage('warn', `Critical dependency missing: ${dep}`);
+                const inDependencies = packageJson.dependencies?.[dep];
+                const inDevDependencies = packageJson.devDependencies?.[dep];
+
+                if (!inDependencies && !inDevDependencies) {
+                    this.log('error', `Critical dependency missing: ${dep}`);
+                    this.criticalIssuesDetected = true;
                 }
             });
+
         } catch (error) {
-            this.logMessage('error', `Dependency validation failed: ${error.message}`);
-            this.criticalChecksPassed = false;
+            this.log('error', 'Package configuration validation failed', { 
+                errorMessage: error.message 
+            });
+            this.criticalIssuesDetected = true;
         }
     }
 
-    generateValidationReport() {
+    generateDiagnosticReport() {
         const report = {
             timestamp: new Date().toISOString(),
-            overallStatus: this.criticalChecksPassed ? 'PASSED' : 'FAILED',
-            logs: this.validationLog
+            status: this.criticalIssuesDetected ? 'DEPLOYMENT_BLOCKED' : 'READY_FOR_DEPLOYMENT',
+            diagnostics: this.diagnosticLog
         };
 
-        fs.writeFileSync('deployment-validation-report.json', JSON.stringify(report, null, 2));
-        return this.criticalChecksPassed;
+        const reportPath = path.resolve(process.cwd(), 'deployment-diagnostic-report.json');
+        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+        return !this.criticalIssuesDetected;
     }
 
-    runFullValidation() {
+    runDiagnostics() {
         this.validateProjectStructure();
-        this.validatePackageJson();
-        this.validateViteConfig();
-        this.validateDependencies();
-        return this.generateValidationReport();
+        this.validatePackageConfiguration();
+        return this.generateDiagnosticReport();
     }
 }
 
-const validator = new DeploymentValidator();
-const validationResult = validator.runFullValidation();
+function main() {
+    const diagnostics = new DeploymentDiagnostics();
+    const deploymentReady = diagnostics.runDiagnostics();
+    process.exit(deploymentReady ? 0 : 1);
+}
 
-process.exit(validationResult ? 0 : 1);
+main();

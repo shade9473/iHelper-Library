@@ -1,41 +1,31 @@
 {
-  "timestamp": "2024-12-27T08:10:33.533Z",
+  "timestamp": "2024-12-27T08:31:03.786Z",
   "overallStatus": "FAILED",
   "logs": [
     {
-      "timestamp": "2024-12-27T08:10:33.526Z",
+      "timestamp": "2024-12-27T08:31:03.540Z",
       "level": "info",
       "message": "Directory validated: src"
     },
     {
-      "timestamp": "2024-12-27T08:10:33.532Z",
+      "timestamp": "2024-12-27T08:31:03.547Z",
       "level": "info",
       "message": "Directory validated: src/scripts"
     },
     {
-      "timestamp": "2024-12-27T08:10:33.532Z",
+      "timestamp": "2024-12-27T08:31:03.548Z",
       "level": "info",
       "message": "Directory validated: dist"
     },
     {
-      "timestamp": "2024-12-27T08:10:33.532Z",
+      "timestamp": "2024-12-27T08:31:03.548Z",
       "level": "info",
       "message": "Directory validated: node_modules"
     },
     {
-      "timestamp": "2024-12-27T08:10:33.533Z",
+      "timestamp": "2024-12-27T08:31:03.786Z",
       "level": "error",
-      "message": "Vite config validation failed: require is not defined"
-    },
-    {
-      "timestamp": "2024-12-27T08:10:33.533Z",
-      "level": "warn",
-      "message": "Critical dependency missing: vite"
-    },
-    {
-      "timestamp": "2024-12-27T08:10:33.533Z",
-      "level": "warn",
-      "message": "Critical dependency missing: marked"
+      "message": "Vite config validation failed: __dirname is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and 'c:\\Users\\ihelp\\Comprehensive_Resource_Library\\Comp_Res_Lib_V2\\package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension."
     }
   ]
 }
