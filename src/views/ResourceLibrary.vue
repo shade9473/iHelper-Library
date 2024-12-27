@@ -11,17 +11,17 @@
             <router-link :to="`/resource/${type}/${resource.id}`">
               {{ resource.title }}
             </router-link>
+            <p>{{ resource.excerpt }}</p>
           </li>
         </ul>
         <p v-else>No resources found for {{ type }}</p>
       </div>
-      <pre>Debug Resources: {{ JSON.stringify(resources, null, 2) }}</pre>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useResourceStore } from '@/stores/resourceStore'
 
 const resourceStore = useResourceStore()
@@ -31,10 +31,8 @@ const error = ref(null)
 
 onMounted(async () => {
   try {
-    console.log('Loading resources...')
     await resourceStore.loadResources()
     resources.value = resourceStore.resources
-    console.log('Loaded resources:', resources.value)
   } catch (err) {
     console.error('Resource loading error:', err)
     error.value = err.message
@@ -49,5 +47,24 @@ onMounted(async () => {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #42b983;
 }
 </style>

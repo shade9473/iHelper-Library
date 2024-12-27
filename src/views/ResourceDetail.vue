@@ -19,17 +19,18 @@ const loading = ref(true)
 const error = ref(null)
 const currentResource = ref(null)
 
-const renderedContent = computed(() => 
-  currentResource.value ? marked(currentResource.value) : ''
-)
+const renderedContent = computed(() => {
+  if (!currentResource.value) return ''
+  return marked.parse(currentResource.value)
+})
 
 onMounted(async () => {
   try {
     const { type, id } = route.params
-    const resourcePath = `c:/Users/ihelp/Comprehensive_Resource_Library/Comp_Res_Lib_V2/resources/${type}/${id}.md`
+    const resourcePath = `/resources/${type}/${id}.md`
     
-    await resourceStore.loadResourceContent(resourcePath)
-    currentResource.value = resourceStore.currentResource
+    const result = await resourceStore.loadResourceContent(resourcePath)
+    currentResource.value = result?.content || ''
   } catch (err) {
     error.value = 'Failed to load resource'
     console.error(err)
