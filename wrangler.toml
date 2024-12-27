@@ -15,14 +15,17 @@ NPM_VERSION = "9.6.7"
 [env.production]
 VITE_ENVIRONMENT = "production"
 VITE_PERFORMANCE_MODE = "optimized"
+pages_build_output_dir = "dist"
 
 [env.preview]
 VITE_ENVIRONMENT = "staging"
 VITE_PERFORMANCE_MODE = "standard"
+pages_build_output_dir = "dist"
 
 [site]
 bucket = "dist"
 entry_point = "index.html"
+pages_build_output_dir = "dist"
 
 [vars]
 APP_NAME = "iHelper Resource Library"
