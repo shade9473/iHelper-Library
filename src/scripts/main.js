@@ -1,6 +1,6 @@
 import ContentMapper from './content-mapper.js';
 
-const contentMapper = new ContentMapper('/path/to/project/root');
+const contentMapper = new ContentMapper('/');
 const categorySummary = contentMapper.getCategorySummary();
 const searchIndex = contentMapper.buildSearchIndex();
 
@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoriesContainer = document.getElementById('categories');
     const resourceViewerModal = document.getElementById('resource-viewer');
     const resourceViewerContent = document.getElementById('resource-viewer-content');
+    const closeModalButton = document.getElementById('close-modal');
 
-    // Populate Categories
+    // Populate Categories with Functional Links
     categorySummary.forEach(category => {
         const categoryElement = document.createElement('div');
         categoryElement.classList.add('category-card');
         categoryElement.innerHTML = `
-            <h3>${category.name}</h3>
+            <h3>${category.name.replace(/_/g, ' ')}</h3>
             <span>${category.itemCount} resources</span>
         `;
         categoryElement.addEventListener('click', () => showCategoryResources(category.name));
@@ -25,18 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showCategoryResources(categoryName) {
         const category = contentMapper.categories.find(c => c.name === categoryName);
-        searchResults.innerHTML = category.items.map(resource => `
-            <div class="resource-item" data-category="${categoryName}" data-title="${resource.title}">
-                ${resource.title}
+        searchResults.innerHTML = category.resources.map(resource => `
+            <div class="resource-item" 
+                 data-category="${categoryName}" 
+                 data-title="${resource.title}">
+                <a href="${resource.link}" target="_blank">${resource.title}</a>
+                <p>${resource.content.substring(0, 100)}...</p>
             </div>
         `).join('');
 
         // Add click listeners to resource items
         document.querySelectorAll('.resource-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const category = item.dataset.category;
-                const title = item.dataset.title;
-                showResourceContent(category, title);
+            item.addEventListener('click', (e) => {
+                if (e.target.tagName !== 'A') {
+                    const category = item.dataset.category;
+                    const title = item.dataset.title;
+                    showResourceContent(category, title);
+                }
             });
         });
     }
@@ -44,7 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function showResourceContent(categoryName, resourceTitle) {
         const content = contentMapper.getResourceContent(categoryName, resourceTitle);
         if (content) {
-            resourceViewerContent.innerHTML = content;
+            resourceViewerContent.innerHTML = `
+                <h2>${resourceTitle}</h2>
+                <p>${content}</p>
+            `;
             resourceViewerModal.classList.remove('hidden');
         }
     }
@@ -59,16 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="search-result" 
                      data-category="${result.category}" 
                      data-title="${result.title}">
-                    ${result.title} (${result.category})
+                    <a href="${result.link}" target="_blank">${result.title}</a>
+                    <span class="category-tag">${result.category}</span>
+                    <p>${result.content.substring(0, 100)}...</p>
                 </div>
             `).join('');
 
             // Add click listeners to search results
             document.querySelectorAll('.search-result').forEach(item => {
-                item.addEventListener('click', () => {
-                    const category = item.dataset.category;
-                    const title = item.dataset.title;
-                    showResourceContent(category, title);
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        const category = item.dataset.category;
+                        const title = item.dataset.title;
+                        showResourceContent(category, title);
+                    }
                 });
             });
         } else {
@@ -77,9 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close modal
-    document.getElementById('close-modal').addEventListener('click', () => {
+    closeModalButton.addEventListener('click', () => {
         resourceViewerModal.classList.add('hidden');
     });
+
+    // Initial load: show default category
+    if (categorySummary.length > 0) {
+        showCategoryResources(categorySummary[0].name);
+    }
 });
 
 // Smooth Scroll Polyfill
@@ -90,7 +108,7 @@ function smoothScroll(target) {
     }
 }
 
-// Analytics and Performance Tracking (Placeholder)
+// Analytics and Performance Tracking
 window.addEventListener('load', () => {
     console.log('Page fully loaded');
     // Future: Implement performance metrics and logging
