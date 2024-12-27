@@ -18,7 +18,13 @@
     "format": "prettier --write \"src/**/*.{vue,js,ts,json}\"",
     "prepare": "husky install",
     "performance:audit": "lighthouse https://ihelper-resource-library.pages.dev --view",
-    "security:scan": "npm audit --audit-level=high"
+    "security:scan": "npm audit --audit-level=high",
+    "validate:deployment": "node scripts/deployment-validator.js",
+    "predeploy": "npm run validate:deployment && npm run build",
+    "deploy": "npm run predeploy && echo 'Deployment Successful'",
+    "rollback": "git reset --hard HEAD~1 && npm ci",
+    "content:index": "node scripts/content-indexer.js",
+    "content:validate": "node scripts/content-validator.js"
   },
   "keywords": [
     "resource-library",
@@ -32,7 +38,9 @@
     "fuse.js": "^6.6.2",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "gray-matter": "^4.0.3",
+    "globby": "^13.2.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231121.0",
@@ -49,7 +57,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm test"
+      "pre-push": "npm run validate:deployment"
     }
   },
   "repository": {

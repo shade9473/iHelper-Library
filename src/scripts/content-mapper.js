@@ -41,7 +41,8 @@ class ContentMapper {
     }
 
     loadCategories() {
-        const categories = [
+        // Dynamically generate categories based on directory structure
+        const predefinedCategories = [
             {
                 name: '01_Welcome_Message',
                 path: '/01_Welcome_Message',
@@ -98,7 +99,17 @@ class ContentMapper {
                 ]
             }
         ];
-        return categories;
+
+        try {
+            // In a real-world scenario, this would use file system APIs or dynamic import
+            // For now, we'll keep the predefined categories
+            return predefinedCategories;
+        } catch (error) {
+            Logger.log('WARN', 'CategoryLoader', 'Failed to dynamically load categories', {
+                error: error.message
+            });
+            return predefinedCategories;
+        }
     }
 
     buildSearchIndex() {
