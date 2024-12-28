@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 import path from 'node:path'
 import compression from 'vite-plugin-compression'
 import { visualizer } from 'rollup-plugin-visualizer'
-import nodePolyfills from 'vite-plugin-node-polyfills'
+import nodePolyfills from 'vite-plugin-node-polyfills/dist/index.mjs'
 
 // Explicitly define process if not available
 if (typeof process === 'undefined') {
