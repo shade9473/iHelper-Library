@@ -9,7 +9,6 @@ pages_build_output_dir = "dist"
 
 [build.environment]
 NODE_VERSION = "20.17.0"
-NPM_VERSION = "9.6.7"
 
 [env.production]
 pages_build_output_dir = "dist"
