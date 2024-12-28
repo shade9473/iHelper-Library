@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 import path from 'node:path'
 import compression from 'vite-plugin-compression'
 import { visualizer } from 'rollup-plugin-visualizer'
-import nodePolyfills from 'vite-plugin-node-polyfills/dist/index.mjs'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // Explicitly define process if not available
 if (typeof process === 'undefined') {
@@ -36,7 +36,14 @@ export default defineConfig(({ mode }) => {
     plugins: [
       vue(),
       nodePolyfills({
-        include: ['process']
+        // Whether to polyfill `node:` protocol imports.
+        protocolImports: true,
+        // Whether to polyfill these globals.
+        globals: {
+          Buffer: true, // can also be 'build', 'dev', or false
+          global: true,
+          process: true,
+        },
       }),
       VitePWA({
         registerType: 'autoUpdate',
