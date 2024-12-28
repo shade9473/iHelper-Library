@@ -5,6 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 import path from 'node:path'
 import compression from 'vite-plugin-compression'
 import { visualizer } from 'rollup-plugin-visualizer'
+import nodePolyfills from 'vite-plugin-node-polyfills'
 
 // Explicitly define process if not available
 if (typeof process === 'undefined') {
@@ -34,6 +35,9 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
+      nodePolyfills({
+        include: ['process']
+      }),
       VitePWA({
         registerType: 'autoUpdate',
         includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
@@ -69,8 +73,12 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        'process': 'process/browser'
+      },
+      // Add browser field resolution
+      browserField: true,
+      mainFields: ['browser', 'module', 'main']
     },
     server: {
       port: 3000,
@@ -81,6 +89,16 @@ export default defineConfig(({ mode }) => {
     preview: {
       port: 8080,
       strictPort: true
+    },
+    optimizeDeps: {
+      include: ['process'],
+      esbuildOptions: {
+        define: {
+          'process.env': JSON.stringify({}),
+          global: 'globalThis'
+        }
+      },
+      exclude: ['globby', 'fast-glob']
     },
     build: {
       outDir: 'dist',
@@ -99,16 +117,16 @@ export default defineConfig(({ mode }) => {
         format: {
           comments: false
         }
-      }
-    },
-    optimizeDeps: {
-      esbuildOptions: {
-        define: {
-          'process.env': JSON.stringify({}),
-          global: 'globalThis'
-        }
       },
-      exclude: ['globby', 'fast-glob']
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor'
+            }
+          }
+        }
+      }
     }
   }
 })
